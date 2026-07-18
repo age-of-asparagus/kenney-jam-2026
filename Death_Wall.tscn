@@ -4,48 +4,202 @@
 [ext_resource type="Texture2D" uid="uid://bcxtcfl8fmi5h" path="res://assets/kenney-platformer-pack/Sprites/Tiles/Default/spikes.png" id="2_b3qrt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67acf"]
-size = Vector2(33, 447)
+size = Vector2(1000, 10000)
 
 [node name="Death_Wall" type="Area2D" unique_id=702217457]
 collision_layer = 8
 collision_mask = 0
 script = ExtResource("1_4ubcq")
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=914815012]
-position = Vector2(-15.5, 0.5)
+position = Vector2(-500, 0.5)
 shape = SubResource("RectangleShape2D_67acf")
 
-[node name="Spikes" type="Sprite2D" parent="." unique_id=72026310]
+[node name="spike_wall" type="Node2D" parent="." unique_id=803881163]
+metadata/_edit_group_ = true
+
+[node name="Spikes" type="Sprite2D" parent="spike_wall" unique_id=72026310]
 rotation = 1.5707964
 texture = ExtResource("2_b3qrt")
 
-[node name="Spikes2" type="Sprite2D" parent="." unique_id=65855663]
+[node name="Spikes2" type="Sprite2D" parent="spike_wall" unique_id=65855663]
 position = Vector2(0, 64)
 rotation = 1.5707964
 texture = ExtResource("2_b3qrt")
 
-[node name="Spikes3" type="Sprite2D" parent="." unique_id=705522218]
+[node name="Spikes3" type="Sprite2D" parent="spike_wall" unique_id=705522218]
 position = Vector2(0, 128)
 rotation = 1.5707964
 texture = ExtResource("2_b3qrt")
 
-[node name="Spikes4" type="Sprite2D" parent="." unique_id=1785689855]
+[node name="Spikes4" type="Sprite2D" parent="spike_wall" unique_id=1785689855]
 position = Vector2(0, -64)
 rotation = 1.5707964
 texture = ExtResource("2_b3qrt")
 
-[node name="Spikes5" type="Sprite2D" parent="." unique_id=308754164]
+[node name="Spikes5" type="Sprite2D" parent="spike_wall" unique_id=308754164]
 position = Vector2(0, -128)
 rotation = 1.5707964
 texture = ExtResource("2_b3qrt")
 
-[node name="Spikes6" type="Sprite2D" parent="." unique_id=515006184]
+[node name="Spikes6" type="Sprite2D" parent="spike_wall" unique_id=515006184]
 position = Vector2(0, 192)
 rotation = 1.5707964
 texture = ExtResource("2_b3qrt")
 
-[node name="Spikes7" type="Sprite2D" parent="." unique_id=2117233409]
+[node name="Spikes7" type="Sprite2D" parent="spike_wall" unique_id=2117233409]
+position = Vector2(0, -192)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="spike_wall2" type="Node2D" parent="." unique_id=565649795]
+position = Vector2(0, 448)
+metadata/_edit_group_ = true
+
+[node name="Spikes" type="Sprite2D" parent="spike_wall2" unique_id=317127344]
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes2" type="Sprite2D" parent="spike_wall2" unique_id=917586174]
+position = Vector2(0, 64)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes3" type="Sprite2D" parent="spike_wall2" unique_id=2139127680]
+position = Vector2(0, 128)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes4" type="Sprite2D" parent="spike_wall2" unique_id=1100199561]
+position = Vector2(0, -64)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes5" type="Sprite2D" parent="spike_wall2" unique_id=384845505]
+position = Vector2(0, -128)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes6" type="Sprite2D" parent="spike_wall2" unique_id=823771443]
+position = Vector2(0, 192)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes7" type="Sprite2D" parent="spike_wall2" unique_id=2037820759]
+position = Vector2(0, -192)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="spike_wall3" type="Node2D" parent="." unique_id=457451312]
+position = Vector2(0, -448)
+metadata/_edit_group_ = true
+
+[node name="Spikes" type="Sprite2D" parent="spike_wall3" unique_id=130701945]
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes2" type="Sprite2D" parent="spike_wall3" unique_id=1734903208]
+position = Vector2(0, 64)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes3" type="Sprite2D" parent="spike_wall3" unique_id=1946541287]
+position = Vector2(0, 128)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes4" type="Sprite2D" parent="spike_wall3" unique_id=1931007964]
+position = Vector2(0, -64)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes5" type="Sprite2D" parent="spike_wall3" unique_id=1700084046]
+position = Vector2(0, -128)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes6" type="Sprite2D" parent="spike_wall3" unique_id=2071896498]
+position = Vector2(0, 192)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes7" type="Sprite2D" parent="spike_wall3" unique_id=1980605024]
+position = Vector2(0, -192)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="spike_wall4" type="Node2D" parent="." unique_id=1255104587]
+position = Vector2(0, -896)
+metadata/_edit_group_ = true
+
+[node name="Spikes" type="Sprite2D" parent="spike_wall4" unique_id=1807568190]
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes2" type="Sprite2D" parent="spike_wall4" unique_id=954878198]
+position = Vector2(0, 64)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes3" type="Sprite2D" parent="spike_wall4" unique_id=266025365]
+position = Vector2(0, 128)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes4" type="Sprite2D" parent="spike_wall4" unique_id=1053087204]
+position = Vector2(0, -64)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes5" type="Sprite2D" parent="spike_wall4" unique_id=1137254920]
+position = Vector2(0, -128)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes6" type="Sprite2D" parent="spike_wall4" unique_id=1360142037]
+position = Vector2(0, 192)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes7" type="Sprite2D" parent="spike_wall4" unique_id=1234246469]
+position = Vector2(0, -192)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="spike_wall5" type="Node2D" parent="." unique_id=1476367600]
+position = Vector2(0, 896)
+metadata/_edit_group_ = true
+
+[node name="Spikes" type="Sprite2D" parent="spike_wall5" unique_id=1631189412]
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes2" type="Sprite2D" parent="spike_wall5" unique_id=2119280005]
+position = Vector2(0, 64)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes3" type="Sprite2D" parent="spike_wall5" unique_id=1471162653]
+position = Vector2(0, 128)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes4" type="Sprite2D" parent="spike_wall5" unique_id=1470275651]
+position = Vector2(0, -64)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes5" type="Sprite2D" parent="spike_wall5" unique_id=516402620]
+position = Vector2(0, -128)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes6" type="Sprite2D" parent="spike_wall5" unique_id=379663536]
+position = Vector2(0, 192)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes7" type="Sprite2D" parent="spike_wall5" unique_id=1705220321]
 position = Vector2(0, -192)
 rotation = 1.5707964
 texture = ExtResource("2_b3qrt")

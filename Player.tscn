@@ -73,5 +73,4 @@ position = Vector2(1, -48.5)
 shape = SubResource("RectangleShape2D_67acf")
 
 [connection signal="area_entered" from="detector_jumps" to="." method="_on_detector_jumps_area_entered"]
-[connection signal="body_entered" from="detector_objects" to="." method="_on_detector_objects_body_entered"]
 [connection signal="area_entered" from="detector_obstacles" to="." method="_on_detector_obstacles_area_entered"]

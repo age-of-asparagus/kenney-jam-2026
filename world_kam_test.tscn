@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://4vrq4ywtfixc" path="res://Tilemap.tscn" id="4_hf60y"]
 [ext_resource type="PackedScene" uid="uid://bgs85j2k2s531" path="res://hud.tscn" id="4_yksrh"]
 [ext_resource type="PackedScene" uid="uid://cntmr5ft57y3o" path="res://Death_Wall.tscn" id="5_hf60y"]
+[ext_resource type="PackedScene" uid="uid://bookk06xhk42y" path="res://death_bottom.tscn" id="7_dcqmi"]
 
 [node name="world" type="Node2D" unique_id=202505794]
 
@@ -35,3 +36,6 @@ tile_map_data = PackedByteArray("AAAAAAkAAAAAAAAAAAABAAkAAAAAAAAAAAACAAkAAAAAAAA
 
 [node name="Death_Wall" parent="." unique_id=702217457 instance=ExtResource("5_hf60y")]
 position = Vector2(-4, 285)
+
+[node name="death_bottom" parent="." unique_id=2007452421 instance=ExtResource("7_dcqmi")]
+position = Vector2(694, 977)
