@@ -77,11 +77,10 @@ layout_mode = 2
 
 [node name="Label4" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3" unique_id=1665607612 instance=ExtResource("2_yk4nu")]
 layout_mode = 2
-text = "JUMP: "
+text = "MASS: "
 
 [node name="HSlider4" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3" unique_id=1114637284 instance=ExtResource("3_dt50h")]
 layout_mode = 2
-editable = false
 
 [connection signal="tweened_value_changed" from="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/HSlider1" to="." method="_on_h_slider_1_value_changed"]
 [connection signal="tweened_value_changed" from="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer3/HSlider2" to="." method="_on_h_slider_2_value_changed"]
