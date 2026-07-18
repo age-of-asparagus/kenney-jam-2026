@@ -1,5 +1,6 @@
 extends CharacterBody2D
  
+var size = 1
 var speed = 200
 var jumpforce = 700
 var gravity = 15
@@ -12,6 +13,10 @@ var state = State.WALKING
 
 
 func _physics_process(delta):
+	size = 0.25*4**(Global.size/50)
+	print(Global.size)
+	scale = Vector2(size,size)
+	
 	state = State.WALKING
 	
 	if not is_on_floor():
@@ -22,7 +27,6 @@ func _physics_process(delta):
 	
 	move_and_slide()
 	
-	print(state)
 	match state:
 		State.WALKING:
 			$AnimatedSprite2D.play("walking")
