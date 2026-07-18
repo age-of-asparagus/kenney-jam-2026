@@ -70,7 +70,6 @@ text = "GRAV: "
 
 [node name="HSlider3" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer" unique_id=548889922 instance=ExtResource("3_dt50h")]
 layout_mode = 2
-step = 50.0
 value = 100.0
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=2089647760]
