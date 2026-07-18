@@ -69,8 +69,13 @@ func _physics_process(delta):
 
 
 func die():
+
+	$"AudioStreamPlayer-Die".play()
+	await $"AudioStreamPlayer-Die".finished
+	
 	Global.size = 50
 	Global.speed = 50
+	
 	get_tree().reload_current_scene()
 
 
