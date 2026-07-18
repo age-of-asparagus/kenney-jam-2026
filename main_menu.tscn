@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://bqd1hnfd6fqqq" path="res://main_menu.gd" id="1_jix8l"]
 [ext_resource type="PackedScene" uid="uid://7bqver4vm3hf" path="res://ui-elements/slider-panel.tscn" id="2_7vrkn"]
 [ext_resource type="PackedScene" uid="uid://b4h6u8shdrqjs" path="res://world_kam_test.tscn" id="2_glbon"]
+[ext_resource type="AudioStream" uid="uid://bdon6ebix7466" path="res://assets/kenney_ui-audio/Audio/click2.ogg" id="5_nlkkf"]
+[ext_resource type="AudioStream" uid="uid://6h4elebfx2bu" path="res://assets/kenney_ui-audio/Audio/click5.ogg" id="6_nlkkf"]
 
 [node name="MainMenu" type="Control" unique_id=1947781883]
 layout_mode = 3
@@ -39,4 +41,11 @@ layout_mode = 2
 [node name="ScalingPanel" parent="MarginContainer" unique_id=904694342 instance=ExtResource("2_7vrkn")]
 layout_mode = 2
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1067414189]
+stream = ExtResource("5_nlkkf")
+
+[node name="AudioStreamPlayerHover" type="AudioStreamPlayer" parent="." unique_id=913944520]
+stream = ExtResource("6_nlkkf")
+
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
