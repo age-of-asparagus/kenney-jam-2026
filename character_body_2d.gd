@@ -36,3 +36,7 @@ func _physics_process(delta):
 
 func _on_detector_area_entered(area):
 	velocity.y -= jumpforce
+
+
+func _on_detector_spikes_area_entered(area):
+	pass # Replace with function body.

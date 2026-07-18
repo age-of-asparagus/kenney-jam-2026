@@ -24,6 +24,13 @@ Global="*uid://dek3j4a6xm3da"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Objects"
+2d_physics/layer_3="Jump_Pads"
+2d_physics/layer_4="Obstacles"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

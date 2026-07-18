@@ -1,19 +1,51 @@
 [gd_scene format=3 uid="uid://cntmr5ft57y3o"]
 
 [ext_resource type="Script" uid="uid://bp12txlcc8ovq" path="res://death_wall.gd" id="1_4ubcq"]
-[ext_resource type="Texture2D" uid="uid://b4mjv85nuq3np" path="res://icon.svg" id="2_b3qrt"]
+[ext_resource type="Texture2D" uid="uid://bcxtcfl8fmi5h" path="res://assets/kenney-platformer-pack/Sprites/Tiles/Default/spikes.png" id="2_b3qrt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67acf"]
-size = Vector2(19, 458)
+size = Vector2(33, 447)
 
 [node name="Death_Wall" type="Area2D" unique_id=702217457]
+collision_layer = 8
+collision_mask = 0
 script = ExtResource("1_4ubcq")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=914815012]
-position = Vector2(-0.5, 0)
+position = Vector2(-15.5, 0.5)
 shape = SubResource("RectangleShape2D_67acf")
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=1843654058]
-position = Vector2(-5, -9)
+[node name="Spikes" type="Sprite2D" parent="." unique_id=72026310]
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes2" type="Sprite2D" parent="." unique_id=65855663]
+position = Vector2(0, 64)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes3" type="Sprite2D" parent="." unique_id=705522218]
+position = Vector2(0, 128)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes4" type="Sprite2D" parent="." unique_id=1785689855]
+position = Vector2(0, -64)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes5" type="Sprite2D" parent="." unique_id=308754164]
+position = Vector2(0, -128)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes6" type="Sprite2D" parent="." unique_id=515006184]
+position = Vector2(0, 192)
+rotation = 1.5707964
+texture = ExtResource("2_b3qrt")
+
+[node name="Spikes7" type="Sprite2D" parent="." unique_id=2117233409]
+position = Vector2(0, -192)
+rotation = 1.5707964
 texture = ExtResource("2_b3qrt")
