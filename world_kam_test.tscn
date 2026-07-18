@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b4mjv85nuq3np" path="res://icon.svg" id="1_ifpci"]
 [ext_resource type="PackedScene" uid="uid://qmxccnuy5b0q" path="res://Player.tscn" id="2_1f7nv"]
+[ext_resource type="PackedScene" uid="uid://cycn3nwdnhutw" path="res://jump_pad.tscn" id="3_a6cgp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67acf"]
 size = Vector2(1216.5, 116)
@@ -9,6 +10,8 @@ size = Vector2(1216.5, 116)
 [node name="world" type="Node2D" unique_id=202505794]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1126012535]
+collision_layer = 2
+collision_mask = 0
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=487232917]
@@ -22,6 +25,8 @@ texture = ExtResource("1_ifpci")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=598692911]
 position = Vector2(1350, 1)
+collision_layer = 2
+collision_mask = 0
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=127314678]
@@ -35,6 +40,8 @@ texture = ExtResource("1_ifpci")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=2130163538]
 position = Vector2(2555, -245)
+collision_layer = 2
+collision_mask = 0
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=838244802]
@@ -48,6 +55,8 @@ texture = ExtResource("1_ifpci")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1682041840]
 position = Vector2(3666, 283)
+collision_layer = 2
+collision_mask = 0
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=400548079]
@@ -61,3 +70,12 @@ texture = ExtResource("1_ifpci")
 
 [node name="CharacterBody2D" parent="." unique_id=1295228391 instance=ExtResource("2_1f7nv")]
 position = Vector2(213, 21)
+
+[node name="Jump_Pad" parent="." unique_id=1292080956 instance=ExtResource("3_a6cgp")]
+position = Vector2(1180, 466)
+
+[node name="Jump_Pad2" parent="." unique_id=1023220926 instance=ExtResource("3_a6cgp")]
+position = Vector2(2551, 474)
+
+[node name="Jump_Pad3" parent="." unique_id=1425494252 instance=ExtResource("3_a6cgp")]
+position = Vector2(4842, 752)

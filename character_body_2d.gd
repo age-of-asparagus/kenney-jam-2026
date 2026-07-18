@@ -14,9 +14,6 @@ var state = State.WALKING
 func _physics_process(delta):
 	state = State.WALKING
 	
-	if Input.is_action_just_pressed("ui_up") and is_on_floor():
-		velocity.y -= jumpforce
-	
 	if not is_on_floor():
 		state = State.JUMPING
 	
@@ -31,3 +28,7 @@ func _physics_process(delta):
 			$AnimatedSprite2D.play("walking")
 		State.JUMPING:
 			$AnimatedSprite2D.play("jumping")
+
+
+func _on_detector_area_entered(area):
+	velocity.y -= jumpforce

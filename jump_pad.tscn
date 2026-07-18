@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cycn3nwdnhutw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_67acf"]
+size = Vector2(138, 19)
+
+[node name="Jump_Pad" type="Area2D" unique_id=1292080956]
+collision_layer = 4
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=911090416]
+position = Vector2(-1, -0.5)
+shape = SubResource("RectangleShape2D_67acf")
