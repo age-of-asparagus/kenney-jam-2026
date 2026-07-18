@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://7bqver4vm3hf"]
 
 [ext_resource type="Texture2D" uid="uid://cr3qg0u0ro38b" path="res://assets/kenney_ui-pack/PNG/Grey/Double/button_rectangle_depth_flat.png" id="1_3v33i"]
+[ext_resource type="Script" uid="uid://b5p1cngb88kdo" path="res://ui-elements/slider_panel.gd" id="2_dt50h"]
 [ext_resource type="PackedScene" uid="uid://lsb0pvh07ecx" path="res://ui-elements/label.tscn" id="2_yk4nu"]
 [ext_resource type="PackedScene" uid="uid://cy4xrchy8iwb0" path="res://ui-elements/scale_slider.tscn" id="3_dt50h"]
 
@@ -12,6 +13,7 @@ patch_margin_left = 10
 patch_margin_top = 10
 patch_margin_right = 10
 patch_margin_bottom = 20
+script = ExtResource("2_dt50h")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1115901009]
 layout_mode = 1
@@ -81,3 +83,8 @@ text = "JUMP: "
 [node name="HSlider4" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3" unique_id=1114637284 instance=ExtResource("3_dt50h")]
 layout_mode = 2
 editable = false
+
+[connection signal="tweened_value_changed" from="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/HSlider1" to="." method="_on_h_slider_1_value_changed"]
+[connection signal="tweened_value_changed" from="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer3/HSlider2" to="." method="_on_h_slider_2_value_changed"]
+[connection signal="tweened_value_changed" from="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/HSlider3" to="." method="_on_h_slider_3_value_changed"]
+[connection signal="tweened_value_changed" from="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3/HSlider4" to="." method="_on_h_slider_4_value_changed"]

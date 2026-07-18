@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cg7nh0ctvox83" path="res://assets/kenney_ui-pack/PNG/Grey/Double/slide_horizontal_grey.png" id="5_a7xo3"]
 [ext_resource type="Texture2D" uid="uid://8ogrdxyuiuqw" path="res://assets/kenney_ui-pack/PNG/Blue/Double/slide_horizontal_color.png" id="6_iwmmu"]
 [ext_resource type="Texture2D" uid="uid://bdevsclpom3rp" path="res://assets/kenney_ui-pack/PNG/Green/Double/slide_horizontal_color.png" id="7_wahk0"]
+[ext_resource type="Script" uid="uid://bw64dqn1ymyk3" path="res://ui-elements/scale_slider.gd" id="8_vvy1y"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i1ily"]
 texture = ExtResource("5_a7xo3")
@@ -32,6 +33,7 @@ texture_margin_bottom = 16.0
 expand_margin_right = 14.0
 
 [node name="HSlider" type="HSlider" unique_id=1017894201]
+custom_minimum_size = Vector2(125, 0)
 size_flags_horizontal = 3
 tooltip_text = "Size"
 mouse_default_cursor_shape = 13
@@ -44,3 +46,9 @@ theme_override_styles/slider = SubResource("StyleBoxTexture_i1ily")
 theme_override_styles/grabber_area = SubResource("StyleBoxTexture_640wx")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_4u2vk")
 value = 50.0
+script = ExtResource("8_vvy1y")
+
+[connection signal="drag_ended" from="." to="." method="_on_drag_ended"]
+[connection signal="drag_started" from="." to="." method="_on_drag_started"]
+[connection signal="tweened_value_changed" from="." to="." method="_on_tweened_value_changed"]
+[connection signal="value_changed" from="." to="." method="_on_value_changed"]

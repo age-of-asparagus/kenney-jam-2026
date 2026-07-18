@@ -1,5 +1,4 @@
-extends Control
-@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+extends NinePatchRect
 
 func _on_h_slider_1_value_changed(value: float) -> void:
 	#audio_stream_player.play()
