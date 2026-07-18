@@ -3,8 +3,8 @@ extends NinePatchRect
 func _on_h_slider_1_value_changed(value: float) -> void:
 	#audio_stream_player.play()
 	
-	print(value)
-	print(Global.size)
+	print("Slider tweened: ", value)
+	print("Size: ", Global.size)
 	Global.previous_size = Global.size
 	Global.size = value
 
