@@ -43,6 +43,4 @@ theme_override_icons/tick = ExtResource("4_540ol")
 theme_override_styles/slider = SubResource("StyleBoxTexture_i1ily")
 theme_override_styles/grabber_area = SubResource("StyleBoxTexture_640wx")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_4u2vk")
-step = 25.0
 value = 50.0
-rounded = true
