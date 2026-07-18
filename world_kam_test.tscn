@@ -15,18 +15,6 @@
 [node name="CharacterBody2D" parent="." unique_id=1295228391 instance=ExtResource("2_1f7nv")]
 position = Vector2(213, 21)
 
-[node name="Jump_Pad" parent="." unique_id=1292080956 instance=ExtResource("3_a6cgp")]
-position = Vector2(1180, 466)
-
-[node name="Jump_Pad2" parent="." unique_id=1023220926 instance=ExtResource("3_a6cgp")]
-position = Vector2(2551, 474)
-
-[node name="Jump_Pad3" parent="." unique_id=1425494252 instance=ExtResource("3_a6cgp")]
-position = Vector2(7347, 771)
-
-[node name="Jump_Pad4" parent="." unique_id=1429363035 instance=ExtResource("3_a6cgp")]
-position = Vector2(3569, 383)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2090488941]
 
 [node name="HUD" parent="CanvasLayer" unique_id=873267030 instance=ExtResource("4_yksrh")]
@@ -39,3 +27,17 @@ position = Vector2(-4, 285)
 
 [node name="death_bottom" parent="." unique_id=2007452421 instance=ExtResource("7_dcqmi")]
 position = Vector2(694, 977)
+
+[node name="Jump_Pads" type="Node2D" parent="." unique_id=1884962929]
+
+[node name="Jump_Pad3" parent="Jump_Pads" unique_id=1425494252 instance=ExtResource("3_a6cgp")]
+position = Vector2(7347, 771)
+
+[node name="Jump_Pad" parent="Jump_Pads" unique_id=1292080956 instance=ExtResource("3_a6cgp")]
+position = Vector2(1180, 466)
+
+[node name="Jump_Pad2" parent="Jump_Pads" unique_id=1023220926 instance=ExtResource("3_a6cgp")]
+position = Vector2(2591, 509)
+
+[node name="Jump_Pad4" parent="Jump_Pads" unique_id=1429363035 instance=ExtResource("3_a6cgp")]
+position = Vector2(3569, 383)

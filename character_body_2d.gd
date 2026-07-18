@@ -30,6 +30,8 @@ func _physics_process(delta):
 		state = State.JUMPING
 		velocity.x = jump_speed
 	else:
+		if $detector_jumps.has_overlapping_areas():
+			velocity.y -= jumpforce
 		jump_speed = speed
 		velocity.x = speed
 	
@@ -49,9 +51,6 @@ func die():
 	Global.speed = 50
 	get_tree().reload_current_scene()
 
-
-func _on_detector_jumps_area_entered(area):
-	velocity.y -= jumpforce
 
 
 func _on_detector_obstacles_area_entered(area):
