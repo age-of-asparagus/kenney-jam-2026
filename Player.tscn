@@ -55,4 +55,13 @@ collision_mask = 4
 position = Vector2(1, 15)
 shape = SubResource("RectangleShape2D_67acf")
 
+[node name="detector_spikes" type="Area2D" parent="." unique_id=1537403743]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detector_spikes" unique_id=646448215]
+position = Vector2(1, 15)
+shape = SubResource("RectangleShape2D_67acf")
+
 [connection signal="area_entered" from="detector" to="." method="_on_detector_area_entered"]
+[connection signal="area_entered" from="detector_spikes" to="." method="_on_detector_spikes_area_entered"]

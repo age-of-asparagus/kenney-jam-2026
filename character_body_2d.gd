@@ -34,9 +34,15 @@ func _physics_process(delta):
 			$AnimatedSprite2D.play("jumping")
 
 
+func die():
+	Global.size = 50
+	Global.speed = 50
+	get_tree().reload_current_scene()
+
+
 func _on_detector_area_entered(area):
 	velocity.y -= jumpforce
 
 
 func _on_detector_spikes_area_entered(area):
-	pass # Replace with function body.
+	die()
