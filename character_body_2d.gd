@@ -15,6 +15,9 @@ var state = State.WALKING
 
 func _physics_process(delta):
 	
+	# Adjust music speed based on Global speed
+	$"../AudioStreamPlayer-BackgroundMusic".set_pitch_scale(Global.speed/50.0)
+	
 	gravity = 0.3*(Global.gravity)-15
 	
 	speed = 62.5*4**(Global.speed/50)
@@ -36,6 +39,7 @@ func _physics_process(delta):
 	else:
 		if $detector_jumps.has_overlapping_areas():
 			velocity.y -= jumpforce * sign(gravity)
+			$"AudioStreamPlayer-Jump".play()
 		jump_speed = speed
 		velocity.x = speed
 	
@@ -57,6 +61,8 @@ func _physics_process(delta):
 			$AnimatedSprite2D.play("walking")
 		State.JUMPING:
 			$AnimatedSprite2D.play("jumping")
+			
+			
 
 
 func die():

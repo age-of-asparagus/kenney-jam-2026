@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bgs85j2k2s531" path="res://hud.tscn" id="4_yksrh"]
 [ext_resource type="PackedScene" uid="uid://cntmr5ft57y3o" path="res://Death_Wall.tscn" id="5_hf60y"]
 [ext_resource type="PackedScene" uid="uid://bookk06xhk42y" path="res://death_bottom.tscn" id="7_dcqmi"]
+[ext_resource type="AudioStream" uid="uid://deahhoq7fd2pn" path="res://assets/viacheslavstarostin-chinese-lunar-new-year-465871.mp3" id="8_psb46"]
 
 [node name="world" type="Node2D" unique_id=202505794]
 
@@ -45,3 +46,9 @@ position = Vector2(2591, 509)
 
 [node name="Jump_Pad4" parent="Jump_Pads" unique_id=1429363035 instance=ExtResource("3_a6cgp")]
 position = Vector2(3554, 385)
+
+[node name="AudioStreamPlayer-BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=680660511]
+stream = ExtResource("8_psb46")
+volume_db = -15.0
+autoplay = true
+parameters/looping = true

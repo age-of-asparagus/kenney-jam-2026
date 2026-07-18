@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d2vmqal1klc5e" path="res://assets/kenney-platformer-pack/Sprites/Characters/Default/character_beige_jump.png" id="2_e80uo"]
 [ext_resource type="Texture2D" uid="uid://c7s5yl0nwjyn7" path="res://assets/kenney-platformer-pack/Sprites/Characters/Default/character_beige_walk_a.png" id="2_kne1u"]
 [ext_resource type="Texture2D" uid="uid://c36v60mjw4nl0" path="res://assets/kenney-platformer-pack/Sprites/Characters/Default/character_beige_walk_b.png" id="3_e80uo"]
+[ext_resource type="AudioStream" uid="uid://b05wc13dcms21" path="res://assets/kenney-platformer-pack/Sounds/sfx_jump.ogg" id="5_cxr5p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0kv70"]
 size = Vector2(76, 97)
@@ -69,5 +70,8 @@ collision_mask = 8
 shape = SubResource("RectangleShape2D_67acf")
 
 [node name="scaling_origin" type="Node2D" parent="." unique_id=1053390586]
+
+[node name="AudioStreamPlayer-Jump" type="AudioStreamPlayer" parent="." unique_id=354574587]
+stream = ExtResource("5_cxr5p")
 
 [connection signal="area_entered" from="detector_obstacles" to="." method="_on_detector_obstacles_area_entered"]
