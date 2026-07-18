@@ -49,6 +49,7 @@ layout_mode = 2
 
 [node name="Label2" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer3" unique_id=1741878621 instance=ExtResource("2_yk4nu")]
 layout_mode = 2
+text = "SPEED:"
 
 [node name="HSlider2" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer3" unique_id=1603804727 instance=ExtResource("3_dt50h")]
 layout_mode = 2
