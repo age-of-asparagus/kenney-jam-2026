@@ -1,5 +1,7 @@
 extends Node
 
+var previous_size = 50
+
 var size = 50
 var speed = 50
 var gravity = 100

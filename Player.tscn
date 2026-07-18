@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c36v60mjw4nl0" path="res://assets/kenney-platformer-pack/Sprites/Characters/Default/character_beige_walk_b.png" id="3_e80uo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0kv70"]
-size = Vector2(76, 96)
+size = Vector2(76, 97)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_67acf"]
 animations = [{
@@ -31,37 +31,47 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67acf"]
-size = Vector2(76, 96)
+size = Vector2(76, 97)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1295228391]
 collision_mask = 6
 script = ExtResource("1_kpjcp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1623600293]
-position = Vector2(1, 15)
+position = Vector2(1, -48.5)
 shape = SubResource("RectangleShape2D_0kv70")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1509431686]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=467880925]
+position = Vector2(0, -64)
 sprite_frames = SubResource("SpriteFrames_67acf")
 animation = &"jumping"
 
-[node name="detector" type="Area2D" parent="." unique_id=8924453]
+[node name="detector_jumps" type="Area2D" parent="." unique_id=8924453]
 collision_layer = 0
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="detector" unique_id=1099658747]
-position = Vector2(1, 15)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detector_jumps" unique_id=1099658747]
+position = Vector2(1, -48.5)
 shape = SubResource("RectangleShape2D_67acf")
 
-[node name="detector_spikes" type="Area2D" parent="." unique_id=1537403743]
+[node name="detector_objects" type="Area2D" parent="." unique_id=1369704099]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detector_objects" unique_id=1779805235]
+position = Vector2(1, -48.5)
+shape = SubResource("RectangleShape2D_67acf")
+
+[node name="detector_obstacles" type="Area2D" parent="." unique_id=1537403743]
 collision_layer = 0
 collision_mask = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="detector_spikes" unique_id=646448215]
-position = Vector2(1, 15)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detector_obstacles" unique_id=646448215]
+position = Vector2(1, -48.5)
 shape = SubResource("RectangleShape2D_67acf")
 
-[connection signal="area_entered" from="detector" to="." method="_on_detector_area_entered"]
-[connection signal="area_entered" from="detector_spikes" to="." method="_on_detector_spikes_area_entered"]
+[connection signal="area_entered" from="detector_jumps" to="." method="_on_detector_jumps_area_entered"]
+[connection signal="body_entered" from="detector_objects" to="." method="_on_detector_objects_body_entered"]
+[connection signal="area_entered" from="detector_obstacles" to="." method="_on_detector_obstacles_area_entered"]

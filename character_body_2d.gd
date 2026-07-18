@@ -40,9 +40,13 @@ func die():
 	get_tree().reload_current_scene()
 
 
-func _on_detector_area_entered(area):
+func _on_detector_jumps_area_entered(area):
 	velocity.y -= jumpforce
 
 
-func _on_detector_spikes_area_entered(area):
+func _on_detector_obstacles_area_entered(area):
 	die()
+
+
+func _on_detector_objects_body_entered(body):
+	Global.size = Global.previous_size

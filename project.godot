@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Kenney Jam 2026"
-run/main_scene="uid://b4h6u8shdrqjs"
+run/main_scene="uid://dculmn71tsqna"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
