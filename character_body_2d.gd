@@ -14,6 +14,9 @@ var state = State.WALKING
 
 
 func _physics_process(delta):
+	
+	gravity = 0.3*(Global.gravity)-15
+	
 	speed = 62.5*4**(Global.speed/50)
 	$AnimatedSprite2D.speed_scale = speed/250
 	
@@ -34,6 +37,15 @@ func _physics_process(delta):
 			velocity.y -= jumpforce
 		jump_speed = speed
 		velocity.x = speed
+	
+	if gravity < 0:
+		rotation = deg_to_rad(180)
+		$AnimatedSprite2D.flip_h = true
+		up_direction.y = 1
+	else:
+		rotation = deg_to_rad(0)
+		$AnimatedSprite2D.flip_h = false
+		up_direction.y = -1
 	
 	velocity.y += gravity
 	
