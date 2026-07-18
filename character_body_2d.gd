@@ -4,19 +4,30 @@ var speed = 200
 var jumpforce = 700
 var gravity = 15
 
-enum state {
-	RUNNING,
+enum State {
+	WALKING,
 	JUMPING
 }
+var state = State.WALKING
 
-func _ready():
-	velocity.x = speed
 
 func _physics_process(delta):
+	state = State.WALKING
 	
 	if Input.is_action_just_pressed("ui_up") and is_on_floor():
 		velocity.y -= jumpforce
 	
+	if not is_on_floor():
+		state = State.JUMPING
+	
+	velocity.x = speed
 	velocity.y += gravity
 	
 	move_and_slide()
+	
+	print(state)
+	match state:
+		State.WALKING:
+			$AnimatedSprite2D.play("walking")
+		State.JUMPING:
+			$AnimatedSprite2D.play("jumping")

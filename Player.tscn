@@ -1,20 +1,44 @@
 [gd_scene format=3 uid="uid://qmxccnuy5b0q"]
 
 [ext_resource type="Script" uid="uid://drkfr5q6q2s3x" path="res://character_body_2d.gd" id="1_kpjcp"]
-[ext_resource type="Texture2D" uid="uid://b4mjv85nuq3np" path="res://icon.svg" id="2_kne1u"]
+[ext_resource type="Texture2D" uid="uid://d2vmqal1klc5e" path="res://assets/kenney-platformer-pack/Sprites/Characters/Default/character_beige_jump.png" id="2_e80uo"]
+[ext_resource type="Texture2D" uid="uid://c7s5yl0nwjyn7" path="res://assets/kenney-platformer-pack/Sprites/Characters/Default/character_beige_walk_a.png" id="2_kne1u"]
+[ext_resource type="Texture2D" uid="uid://c36v60mjw4nl0" path="res://assets/kenney-platformer-pack/Sprites/Characters/Default/character_beige_walk_b.png" id="3_e80uo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0kv70"]
 size = Vector2(115, 116)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_67acf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_e80uo")
+}],
+"loop": 1,
+"name": &"jumping",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kne1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_e80uo")
+}],
+"loop": 1,
+"name": &"walking",
+"speed": 5.0
+}]
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1295228391]
 script = ExtResource("1_kpjcp")
-
-[node name="Icon" type="Sprite2D" parent="." unique_id=329603136]
-position = Vector2(-10, 6)
-texture = ExtResource("2_kne1u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1623600293]
 position = Vector2(-18.5, 9)
 shape = SubResource("RectangleShape2D_0kv70")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1509431686]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=467880925]
+sprite_frames = SubResource("SpriteFrames_67acf")
+animation = &"jumping"
