@@ -5,7 +5,7 @@ var size = 1
 var speed = 200
 var jumpforce = 700
 var gravity = 15
-var mass = 50
+var mass = 1
 
 var Ground_Particles = preload("res://walking_particles.tscn")
 
@@ -20,6 +20,8 @@ func _physics_process(delta):
 	
 	# Adjust music speed based on Global speed
 	$"../AudioStreamPlayer-BackgroundMusic".set_pitch_scale(Global.speed/50.0)
+	
+	mass = (1/3.0)*3**(Global.mass/50)
 	
 	gravity = 0.3*(Global.gravity)-15
 	
@@ -86,8 +88,12 @@ func _on_detector_obstacles_area_entered(area):
 
 
 func _on_animated_sprite_2d_animation_looped():
+	print(Global.mass)
 	if $AnimatedSprite2D.animation == "walking":
 		var ground_particles = Ground_Particles.instantiate()
 		ground_particles.global_position = $ground_particle_position.global_position
+		ground_particles.scale_amount_min *= mass
+		ground_particles.scale_amount_max *= mass
+		ground_particles.scale = Vector2(mass,mass)
 		ground_particles.emitting = true
 		get_parent().add_child(ground_particles)

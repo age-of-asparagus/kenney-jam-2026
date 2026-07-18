@@ -37,4 +37,4 @@ func _on_h_slider_3_value_changed(value: float) -> void:
 
 func _on_h_slider_4_value_changed(value: float) -> void:
 	#audio_stream_player.play()
-	Global.jump = value
+	Global.mass = value
