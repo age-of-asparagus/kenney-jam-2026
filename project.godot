@@ -21,8 +21,9 @@ Global="*uid://dek3j4a6xm3da"
 
 [display]
 
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 window/stretch/aspect="expand"
+window/stretch/scale=0.5
 
 [layer_names]
 

@@ -9,24 +9,24 @@
 
 [node name="Parallax2D-StationaryBackground" type="Parallax2D" parent="." unique_id=1044461783]
 repeat_size = Vector2(1024, 0)
-repeat_times = 3
+repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D-StationaryBackground" unique_id=1735755117]
 position = Vector2(0, -22341)
-scale = Vector2(2, 44.384766)
+scale = Vector2(2, 46.515625)
 texture = ExtResource("1_7cnp6")
 centered = false
 
 [node name="Sprite2D2" type="Sprite2D" parent="Parallax2D-StationaryBackground" unique_id=1719393149]
-position = Vector2(0, 375)
-scale = Vector2(2, 60.921875)
+position = Vector2(0, -163)
+scale = Vector2(2, 61.97266)
 texture = ExtResource("2_xehqc")
 centered = false
 
 [node name="Parallax2D2-Clouds" type="Parallax2D" parent="." unique_id=1120527098]
 scroll_scale = Vector2(0.3, 0.3)
 repeat_size = Vector2(1024, 0)
-repeat_times = 3
+repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D2-Clouds" unique_id=1546215025]
 scale = Vector2(2, 2)
