@@ -2,6 +2,10 @@
 
 [ext_resource type="Script" uid="uid://bp12txlcc8ovq" path="res://death_wall.gd" id="1_4ubcq"]
 [ext_resource type="Texture2D" uid="uid://bcxtcfl8fmi5h" path="res://assets/kenney-platformer-pack/Sprites/Tiles/Default/spikes.png" id="2_b3qrt"]
+[ext_resource type="Texture2D" uid="uid://cx1oyqlq4ea5w" path="res://assets/kenney-platformer-pack/Sprites/Tiles/Default/terrain_stone_block_top.png" id="3_b1beg"]
+[ext_resource type="Texture2D" uid="uid://dhyx0qwbdcmw6" path="res://assets/kenney-platformer-pack/Sprites/Tiles/Default/terrain_stone_block_top_left.png" id="4_0rfuo"]
+[ext_resource type="Texture2D" uid="uid://bw5s12ccw255q" path="res://assets/kenney-platformer-pack/Sprites/Tiles/Default/terrain_stone_block_top_right.png" id="5_y745g"]
+[ext_resource type="Texture2D" uid="uid://ch5leeyixbskx" path="res://assets/kenney-platformer-pack/Sprites/Tiles/Default/terrain_stone_block_center.png" id="6_ls5gx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67acf"]
 size = Vector2(1000, 10000)
@@ -203,3 +207,195 @@ texture = ExtResource("2_b3qrt")
 position = Vector2(0, -192)
 rotation = 1.5707964
 texture = ExtResource("2_b3qrt")
+
+[node name="WallEdge" type="Node2D" parent="." unique_id=224636471]
+
+[node name="TerrainStoneBlockTop" type="Sprite2D" parent="WallEdge" unique_id=1979075262]
+position = Vector2(-64, -1056)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop2" type="Sprite2D" parent="WallEdge" unique_id=2131436363]
+position = Vector2(-64, -992)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop3" type="Sprite2D" parent="WallEdge" unique_id=1836555797]
+position = Vector2(-64, -928)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop4" type="Sprite2D" parent="WallEdge" unique_id=845052276]
+position = Vector2(-64, -864)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop5" type="Sprite2D" parent="WallEdge" unique_id=96931247]
+position = Vector2(-64, -800)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop6" type="Sprite2D" parent="WallEdge" unique_id=109477633]
+position = Vector2(-64, -736)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop7" type="Sprite2D" parent="WallEdge" unique_id=1169609436]
+position = Vector2(-64, -672)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop8" type="Sprite2D" parent="WallEdge" unique_id=76212598]
+position = Vector2(-64, -608)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop9" type="Sprite2D" parent="WallEdge" unique_id=883274483]
+position = Vector2(-64, -544)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop10" type="Sprite2D" parent="WallEdge" unique_id=211340113]
+position = Vector2(-64, -480)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop11" type="Sprite2D" parent="WallEdge" unique_id=203938664]
+position = Vector2(-64, -416)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop12" type="Sprite2D" parent="WallEdge" unique_id=141559058]
+position = Vector2(-64, -352)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop13" type="Sprite2D" parent="WallEdge" unique_id=494914105]
+position = Vector2(-64, -288)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop14" type="Sprite2D" parent="WallEdge" unique_id=1987521559]
+position = Vector2(-64, -224)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop15" type="Sprite2D" parent="WallEdge" unique_id=1727161627]
+position = Vector2(-64, -160)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop16" type="Sprite2D" parent="WallEdge" unique_id=1795561710]
+position = Vector2(-64, -96)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop17" type="Sprite2D" parent="WallEdge" unique_id=661212292]
+position = Vector2(-64, -32)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop18" type="Sprite2D" parent="WallEdge" unique_id=709264040]
+position = Vector2(-64, 32)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop19" type="Sprite2D" parent="WallEdge" unique_id=1948753723]
+position = Vector2(-64, 96)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop20" type="Sprite2D" parent="WallEdge" unique_id=629017358]
+position = Vector2(-64, 160)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop21" type="Sprite2D" parent="WallEdge" unique_id=1711813936]
+position = Vector2(-64, 224)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop22" type="Sprite2D" parent="WallEdge" unique_id=1728215938]
+position = Vector2(-64, 288)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop23" type="Sprite2D" parent="WallEdge" unique_id=8516604]
+position = Vector2(-64, 352)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop24" type="Sprite2D" parent="WallEdge" unique_id=1194411153]
+position = Vector2(-64, 416)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop25" type="Sprite2D" parent="WallEdge" unique_id=545549505]
+position = Vector2(-64, 480)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop26" type="Sprite2D" parent="WallEdge" unique_id=384830742]
+position = Vector2(-64, 544)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop27" type="Sprite2D" parent="WallEdge" unique_id=1303656308]
+position = Vector2(-64, 608)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop28" type="Sprite2D" parent="WallEdge" unique_id=883976053]
+position = Vector2(-64, 672)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop29" type="Sprite2D" parent="WallEdge" unique_id=1833474826]
+position = Vector2(-64, 736)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop30" type="Sprite2D" parent="WallEdge" unique_id=831484685]
+position = Vector2(-64, 800)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop31" type="Sprite2D" parent="WallEdge" unique_id=845399495]
+position = Vector2(-64, 864)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop32" type="Sprite2D" parent="WallEdge" unique_id=25673694]
+position = Vector2(-64, 928)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop33" type="Sprite2D" parent="WallEdge" unique_id=631683149]
+position = Vector2(-64, 992)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTop34" type="Sprite2D" parent="WallEdge" unique_id=1334898954]
+position = Vector2(-64, 1056)
+rotation = 1.5707964
+texture = ExtResource("3_b1beg")
+
+[node name="TerrainStoneBlockTopLeft" type="Sprite2D" parent="WallEdge" unique_id=1928619720]
+position = Vector2(-64, -1120)
+rotation = 1.5707964
+texture = ExtResource("4_0rfuo")
+
+[node name="TerrainStoneBlockTopRight" type="Sprite2D" parent="WallEdge" unique_id=1009353456]
+position = Vector2(-64, 1120)
+rotation = 1.5707964
+texture = ExtResource("5_y745g")
+
+[node name="WallBody" type="Node2D" parent="." unique_id=582791595]
+
+[node name="TerrainStoneBlockCenter" type="Sprite2D" parent="WallBody" unique_id=882654535]
+texture_repeat = 2
+position = Vector2(-1056, 0)
+rotation = 1.5707964
+texture = ExtResource("6_ls5gx")
+region_enabled = true
+region_rect = Rect2(0, 0, 2176, 1920)
