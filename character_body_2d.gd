@@ -22,7 +22,7 @@ func _physics_process(delta):
 	
 	if $detector_objects.has_overlapping_bodies():
 		Global.size = Global.previous_size
-		Global.player_stuck.emit()
+		Global.size
 	
 	size = (1/3.0)*3**(Global.size/50)
 	scale = Vector2(size,size)
@@ -34,7 +34,7 @@ func _physics_process(delta):
 		velocity.x = jump_speed
 	else:
 		if $detector_jumps.has_overlapping_areas():
-			velocity.y -= jumpforce
+			velocity.y -= jumpforce * sign(gravity)
 		jump_speed = speed
 		velocity.x = speed
 	

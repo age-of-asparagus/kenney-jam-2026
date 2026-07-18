@@ -38,13 +38,12 @@ collision_mask = 6
 script = ExtResource("1_kpjcp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1623600293]
-position = Vector2(1, -48.5)
 shape = SubResource("RectangleShape2D_0kv70")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1509431686]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=467880925]
-position = Vector2(0, -64)
+position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_67acf")
 animation = &"jumping"
 
@@ -53,7 +52,6 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detector_jumps" unique_id=1099658747]
-position = Vector2(1, -48.5)
 shape = SubResource("RectangleShape2D_67acf")
 
 [node name="detector_objects" type="Area2D" parent="." unique_id=1369704099]
@@ -61,7 +59,6 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detector_objects" unique_id=1779805235]
-position = Vector2(1, -48.5)
 shape = SubResource("RectangleShape2D_67acf")
 
 [node name="detector_obstacles" type="Area2D" parent="." unique_id=1537403743]
@@ -69,7 +66,8 @@ collision_layer = 0
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detector_obstacles" unique_id=646448215]
-position = Vector2(1, -48.5)
 shape = SubResource("RectangleShape2D_67acf")
+
+[node name="scaling_origin" type="Node2D" parent="." unique_id=1053390586]
 
 [connection signal="area_entered" from="detector_obstacles" to="." method="_on_detector_obstacles_area_entered"]

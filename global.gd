@@ -1,9 +1,9 @@
 extends Node
 
-signal player_stuck
 
 
 
+var pause_size_increase = false
 
 var previous_size = 50
 

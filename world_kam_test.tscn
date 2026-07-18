@@ -36,6 +36,10 @@ position = Vector2(7347, 771)
 [node name="Jump_Pad" parent="Jump_Pads" unique_id=1292080956 instance=ExtResource("3_a6cgp")]
 position = Vector2(1183, 509)
 
+[node name="Jump_Pad5" parent="Jump_Pads" unique_id=1852327879 instance=ExtResource("3_a6cgp")]
+position = Vector2(1247, -314)
+rotation = 3.1415927
+
 [node name="Jump_Pad2" parent="Jump_Pads" unique_id=1023220926 instance=ExtResource("3_a6cgp")]
 position = Vector2(2591, 509)
 
