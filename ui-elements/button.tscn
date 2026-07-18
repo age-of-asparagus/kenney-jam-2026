@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dn152d54wbq5a"]
+
+[ext_resource type="Texture2D" uid="uid://cy4qm0f7u7iln" path="res://assets/kenney_ui-pack/PNG/Blue/Double/button_rectangle_depth_gradient.png" id="1_ubngm"]
+[ext_resource type="Texture2D" uid="uid://b2uy08nykchp6" path="res://assets/kenney_ui-pack/PNG/Blue/Double/button_rectangle_flat.png" id="2_oo47a"]
+[ext_resource type="Texture2D" uid="uid://ccjv8srdeweli" path="res://assets/kenney_ui-pack/PNG/Blue/Double/button_rectangle_depth_flat.png" id="3_vgnf8"]
+
+[node name="TextureButton" type="TextureButton" unique_id=72927890]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_ubngm")
+texture_pressed = ExtResource("2_oo47a")
+texture_hover = ExtResource("3_vgnf8")
+
+[node name="Label" type="Label" parent="." unique_id=67436685]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.5
+offset_top = -31.5
+offset_right = 110.5
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 45
+text = "New Game"
+horizontal_alignment = 1
