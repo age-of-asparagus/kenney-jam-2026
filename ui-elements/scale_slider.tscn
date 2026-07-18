@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://8ogrdxyuiuqw" path="res://assets/kenney_ui-pack/PNG/Blue/Double/slide_horizontal_color.png" id="6_iwmmu"]
 [ext_resource type="Texture2D" uid="uid://bdevsclpom3rp" path="res://assets/kenney_ui-pack/PNG/Green/Double/slide_horizontal_color.png" id="7_wahk0"]
 [ext_resource type="Script" uid="uid://bw64dqn1ymyk3" path="res://ui-elements/scale_slider.gd" id="8_vvy1y"]
+[ext_resource type="AudioStream" uid="uid://bdon6ebix7466" path="res://assets/kenney_ui-audio/Audio/click2.ogg" id="9_tygwb"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i1ily"]
 texture = ExtResource("5_a7xo3")
@@ -48,7 +49,11 @@ theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_4u2v
 value = 50.0
 script = ExtResource("8_vvy1y")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=500785403]
+stream = ExtResource("9_tygwb")
+
 [connection signal="drag_ended" from="." to="." method="_on_drag_ended"]
 [connection signal="drag_started" from="." to="." method="_on_drag_started"]
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
 [connection signal="tweened_value_changed" from="." to="." method="_on_tweened_value_changed"]
 [connection signal="value_changed" from="." to="." method="_on_value_changed"]

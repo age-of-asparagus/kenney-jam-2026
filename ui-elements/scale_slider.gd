@@ -35,8 +35,8 @@ func _on_value_changed(new_value: float) -> void:
 func _tween_slider_value(val: float) -> void:
 	# if the character shouldn't grow (e.g. would hit a roof)
 	# and if user is trying to grow, prevent it 
-	print("Paused?: ", Global.pause_size_increase)
-	print("Growing: ", val > internal_value)
+	#print("Paused?: ", Global.pause_size_increase)
+	#print("Growing: ", val > internal_value)
 	if Global.pause_size_increase and val > internal_value:
 		return
 	internal_value = val
@@ -46,3 +46,7 @@ func _tween_slider_value(val: float) -> void:
 
 #func _on_tweened_value_changed(new_value: float) -> void:
 	#print("Tweened value: ", new_value)
+
+
+func _on_focus_entered() -> void:
+	$AudioStreamPlayer.play()
