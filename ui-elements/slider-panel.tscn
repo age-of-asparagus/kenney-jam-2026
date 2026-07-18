@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://lsb0pvh07ecx" path="res://ui-elements/label.tscn" id="2_yk4nu"]
 [ext_resource type="PackedScene" uid="uid://cy4xrchy8iwb0" path="res://ui-elements/scale_slider.tscn" id="3_dt50h"]
 
-[node name="NinePatchRect" type="NinePatchRect" unique_id=904694342]
-custom_minimum_size = Vector2(0, 200)
+[node name="ScalingPanel" type="NinePatchRect" unique_id=904694342]
+custom_minimum_size = Vector2(600, 200)
 size_flags_vertical = 8
 texture = ExtResource("1_3v33i")
 patch_margin_left = 10
