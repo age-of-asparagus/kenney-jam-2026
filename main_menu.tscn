@@ -40,6 +40,7 @@ layout_mode = 2
 
 [node name="ScalingPanel" parent="MarginContainer" unique_id=904694342 instance=ExtResource("2_7vrkn")]
 layout_mode = 2
+script = null
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1067414189]
 stream = ExtResource("5_nlkkf")

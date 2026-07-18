@@ -5,8 +5,6 @@ var speed = 200
 var jumpforce = 700
 var gravity = 15
 
-var overlapping_object = false
-
 enum State {
 	WALKING,
 	JUMPING
