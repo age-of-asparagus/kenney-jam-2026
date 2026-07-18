@@ -81,8 +81,8 @@ func _on_detector_obstacles_area_entered(area):
 
 
 func _on_animated_sprite_2d_animation_looped():
-	print("hi")
-	var ground_particles = Ground_Particles.instantiate()
-	ground_particles.global_position = $ground_particle_position.global_position
-	ground_particles.emitting = true
-	get_parent().add_child(ground_particles)
+	if $AnimatedSprite2D.animation == "walking":
+		var ground_particles = Ground_Particles.instantiate()
+		ground_particles.global_position = $ground_particle_position.global_position
+		ground_particles.emitting = true
+		get_parent().add_child(ground_particles)
