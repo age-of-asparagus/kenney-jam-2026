@@ -76,7 +76,7 @@ func die():
 	Global.size = 50
 	Global.speed = 50
 	
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://main_menu.tscn")
 
 
 
