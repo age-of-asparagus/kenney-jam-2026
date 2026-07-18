@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bookk06xhk42y"]
 
 [ext_resource type="Texture2D" uid="uid://bcxtcfl8fmi5h" path="res://assets/kenney-platformer-pack/Sprites/Tiles/Default/spikes.png" id="1_67v7n"]
+[ext_resource type="Texture2D" uid="uid://cx1oyqlq4ea5w" path="res://assets/kenney-platformer-pack/Sprites/Tiles/Default/terrain_stone_block_top.png" id="2_sjm8n"]
+[ext_resource type="Texture2D" uid="uid://ch5leeyixbskx" path="res://assets/kenney-platformer-pack/Sprites/Tiles/Default/terrain_stone_block_center.png" id="3_8tptc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67acf"]
 size = Vector2(100000, 1000)
@@ -1943,3 +1945,17 @@ texture = ExtResource("1_67v7n")
 position = Vector2(0, -192)
 rotation = 1.5707964
 texture = ExtResource("1_67v7n")
+
+[node name="TerrainStoneBlockTop" type="Sprite2D" parent="." unique_id=1773305218]
+texture_repeat = 2
+position = Vector2(0, 64)
+texture = ExtResource("2_sjm8n")
+region_enabled = true
+region_rect = Rect2(0, 0, 25600, 64)
+
+[node name="TerrainStoneBlockCenter" type="Sprite2D" parent="." unique_id=325363783]
+texture_repeat = 2
+position = Vector2(-16, 416)
+texture = ExtResource("3_8tptc")
+region_enabled = true
+region_rect = Rect2(0, 0, 25600, 640)
