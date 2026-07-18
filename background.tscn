@@ -18,8 +18,8 @@ texture = ExtResource("1_7cnp6")
 centered = false
 
 [node name="Sprite2D2" type="Sprite2D" parent="Parallax2D-StationaryBackground" unique_id=1719393149]
-position = Vector2(0, -163)
-scale = Vector2(2, 61.97266)
+position = Vector2(0, -1379.9999)
+scale = Vector2(2, 42.710938)
 texture = ExtResource("2_xehqc")
 centered = false
 
