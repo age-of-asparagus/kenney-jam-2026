@@ -28,7 +28,7 @@ func _on_value_changed(new_value: float) -> void:
 	
 	# Tween it from the old position to the  target.
 	tween.tween_method(_tween_slider_value, internal_value, target_value, duration) \
-		.set_trans(Tween.TRANS_SINE) 
+		.set_trans(Tween.TRANS_LINEAR) 
 		#.set_ease(Tween.)
 
 # The tween calls this function on every frame of the animation
