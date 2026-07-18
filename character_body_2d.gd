@@ -21,8 +21,9 @@ func _physics_process(delta):
 	$AnimatedSprite2D.speed_scale = speed/250
 	
 	if $detector_objects.has_overlapping_bodies():
-		Global.size = Global.previous_size
-		Global.size
+		Global.pause_size_increase = true
+	else:
+		Global.pause_size_increase = false
 	
 	size = (1/3.0)*3**(Global.size/50)
 	scale = Vector2(size,size)
