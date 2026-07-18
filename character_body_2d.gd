@@ -1,5 +1,6 @@
 extends CharacterBody2D
  
+var jump_speed = 200
 var size = 1
 var speed = 200
 var jumpforce = 700
@@ -18,6 +19,8 @@ func _physics_process(delta):
 	
 	if $detector_objects.has_overlapping_bodies():
 		Global.size = Global.previous_size
+		Global.player_stuck.emit()
+	
 	size = (1/3.0)*3**(Global.size/50)
 	scale = Vector2(size,size)
 	
@@ -25,8 +28,11 @@ func _physics_process(delta):
 	
 	if not is_on_floor():
 		state = State.JUMPING
+		velocity.x = jump_speed
+	else:
+		jump_speed = speed
+		velocity.x = speed
 	
-	velocity.x = speed
 	velocity.y += gravity
 	
 	move_and_slide()
