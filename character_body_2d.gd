@@ -13,8 +13,8 @@ var state = State.WALKING
 
 
 func _physics_process(delta):
+	speed = 62.5*4**(Global.speed/50)
 	size = (1/3.0)*3**(Global.size/50)
-	print(Global.size)
 	scale = Vector2(size,size)
 	
 	state = State.WALKING
