@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://7bqver4vm3hf"]
+
+[ext_resource type="Texture2D" uid="uid://cr3qg0u0ro38b" path="res://assets/kenney_ui-pack/PNG/Grey/Double/button_rectangle_depth_flat.png" id="1_3v33i"]
+[ext_resource type="PackedScene" uid="uid://lsb0pvh07ecx" path="res://ui-elements/label.tscn" id="2_yk4nu"]
+[ext_resource type="PackedScene" uid="uid://cy4xrchy8iwb0" path="res://ui-elements/scale_slider.tscn" id="3_dt50h"]
+
+[node name="NinePatchRect" type="NinePatchRect" unique_id=904694342]
+custom_minimum_size = Vector2(0, 200)
+size_flags_vertical = 8
+texture = ExtResource("1_3v33i")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1115901009]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1441768478]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1851387060]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=8978210]
+layout_mode = 2
+
+[node name="Label1" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1274994337 instance=ExtResource("2_yk4nu")]
+layout_mode = 2
+text = "SIZE: "
+
+[node name="HSlider1" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1017894201 instance=ExtResource("3_dt50h")]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=790619683]
+layout_mode = 2
+
+[node name="Label2" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer3" unique_id=1741878621 instance=ExtResource("2_yk4nu")]
+layout_mode = 2
+
+[node name="HSlider2" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer3" unique_id=1603804727 instance=ExtResource("3_dt50h")]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=2125360124]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1873082497]
+layout_mode = 2
+
+[node name="Label3" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer" unique_id=1480880082 instance=ExtResource("2_yk4nu")]
+layout_mode = 2
+text = "GRAV: "
+
+[node name="HSlider3" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer" unique_id=548889922 instance=ExtResource("3_dt50h")]
+layout_mode = 2
+step = 50.0
+value = 100.0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=2089647760]
+layout_mode = 2
+
+[node name="Label4" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3" unique_id=1665607612 instance=ExtResource("2_yk4nu")]
+layout_mode = 2
+text = "JUMP: "
+
+[node name="HSlider4" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3" unique_id=1114637284 instance=ExtResource("3_dt50h")]
+layout_mode = 2
+editable = false
