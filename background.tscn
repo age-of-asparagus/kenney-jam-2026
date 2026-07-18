@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://b4nx3iajrwjrb"]
+
+[ext_resource type="Texture2D" uid="uid://cjy3r7b0poamj" path="res://assets/kenney-platformer-pack/Sprites/Backgrounds/Double/background_solid_sky.png" id="1_7cnp6"]
+[ext_resource type="Texture2D" uid="uid://ct2oxpm4u0ol5" path="res://assets/kenney-platformer-pack/Sprites/Backgrounds/Double/background_solid_cloud.png" id="2_xehqc"]
+[ext_resource type="Texture2D" uid="uid://cwsippbmdt4bb" path="res://assets/kenney-platformer-pack/Sprites/Backgrounds/Double/background_clouds.png" id="3_1ckfd"]
+[ext_resource type="Texture2D" uid="uid://co55728wp1ymg" path="res://assets/kenney-platformer-pack/Sprites/Backgrounds/Double/background_fade_mushrooms.png" id="4_splo0"]
+
+[node name="Background" type="Node2D" unique_id=1540794392]
+
+[node name="Parallax2D-StationaryBackground" type="Parallax2D" parent="." unique_id=1044461783]
+repeat_size = Vector2(1024, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D-StationaryBackground" unique_id=1735755117]
+position = Vector2(0, -22341)
+scale = Vector2(2, 44.384766)
+texture = ExtResource("1_7cnp6")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D-StationaryBackground" unique_id=1719393149]
+position = Vector2(0, 375)
+scale = Vector2(2, 60.921875)
+texture = ExtResource("2_xehqc")
+centered = false
+
+[node name="Parallax2D2-Clouds" type="Parallax2D" parent="." unique_id=1120527098]
+scroll_scale = Vector2(0.3, 0.3)
+repeat_size = Vector2(1024, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2-Clouds" unique_id=1546215025]
+scale = Vector2(2, 2)
+texture = ExtResource("3_1ckfd")
+
+[node name="Parallax2D3-Hills" type="Parallax2D" parent="." unique_id=892860658]
+visible = false
+scroll_scale = Vector2(0.3, 0.3)
+repeat_size = Vector2(1024, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D3-Hills" unique_id=633399279]
+scale = Vector2(2, 2)
+texture = ExtResource("4_splo0")

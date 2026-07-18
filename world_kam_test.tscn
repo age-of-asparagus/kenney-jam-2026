@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://b4h6u8shdrqjs"]
 
+[ext_resource type="PackedScene" uid="uid://b4nx3iajrwjrb" path="res://background.tscn" id="1_q5ugo"]
 [ext_resource type="PackedScene" uid="uid://qmxccnuy5b0q" path="res://Player.tscn" id="2_1f7nv"]
 [ext_resource type="PackedScene" uid="uid://cycn3nwdnhutw" path="res://jump_pad.tscn" id="3_a6cgp"]
 [ext_resource type="PackedScene" uid="uid://4vrq4ywtfixc" path="res://Tilemap.tscn" id="4_hf60y"]
@@ -7,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://cntmr5ft57y3o" path="res://Death_Wall.tscn" id="5_hf60y"]
 
 [node name="world" type="Node2D" unique_id=202505794]
+
+[node name="Background" parent="." unique_id=1540794392 instance=ExtResource("1_q5ugo")]
 
 [node name="CharacterBody2D" parent="." unique_id=1295228391 instance=ExtResource("2_1f7nv")]
 position = Vector2(213, 21)
