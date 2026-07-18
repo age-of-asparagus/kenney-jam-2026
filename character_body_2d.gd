@@ -5,6 +5,9 @@ var size = 1
 var speed = 200
 var jumpforce = 700
 var gravity = 15
+var mass = 50
+
+var Ground_Particles = preload("res://walking_particles.tscn")
 
 enum State {
 	WALKING,
@@ -74,3 +77,12 @@ func die():
 
 func _on_detector_obstacles_area_entered(area):
 	die()
+
+
+
+func _on_animated_sprite_2d_animation_looped():
+	print("hi")
+	var ground_particles = Ground_Particles.instantiate()
+	ground_particles.global_position = $ground_particle_position.global_position
+	ground_particles.emitting = true
+	get_parent().add_child(ground_particles)

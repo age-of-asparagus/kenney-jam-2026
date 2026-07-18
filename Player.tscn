@@ -46,7 +46,7 @@ shape = SubResource("RectangleShape2D_0kv70")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=467880925]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_67acf")
-animation = &"jumping"
+animation = &"walking"
 
 [node name="detector_jumps" type="Area2D" parent="." unique_id=8924453]
 collision_layer = 0
@@ -74,4 +74,8 @@ shape = SubResource("RectangleShape2D_67acf")
 [node name="AudioStreamPlayer-Jump" type="AudioStreamPlayer" parent="." unique_id=354574587]
 stream = ExtResource("5_cxr5p")
 
+[node name="ground_particle_position" type="Marker2D" parent="." unique_id=1236847505]
+position = Vector2(0, 48)
+
+[connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]
 [connection signal="area_entered" from="detector_obstacles" to="." method="_on_detector_obstacles_area_entered"]
