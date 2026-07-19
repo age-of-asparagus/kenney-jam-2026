@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://d2n6wc28srb8"]
 
+[ext_resource type="Script" uid="uid://dhcuncu1wj6tq" path="res://walking_particles.gd" id="1_uc8ya"]
+
 [sub_resource type="Gradient" id="Gradient_67acf"]
 offsets = PackedFloat32Array(0, 0.5584416, 1)
 colors = PackedColorArray(0.3137255, 0.11764706, 0.019607844, 1, 0.3137255, 0.11764706, 0.019607844, 1, 0.3137255, 0.11764706, 0.019607844, 0)
@@ -17,3 +19,6 @@ initial_velocity_max = 30.0
 scale_amount_min = 5.0
 scale_amount_max = 10.0
 color_ramp = SubResource("Gradient_67acf")
+script = ExtResource("1_uc8ya")
+
+[connection signal="finished" from="." to="." method="_on_finished"]
