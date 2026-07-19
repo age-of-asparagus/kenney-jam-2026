@@ -15,6 +15,9 @@ enum State {
 }
 var state = State.WALKING
 
+func _ready():
+	global_position = Global.spawn
+
 
 func _physics_process(delta):
 	

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://qmxccnuy5b0q"]
 
-[ext_resource type="Script" uid="uid://drkfr5q6q2s3x" path="res://character_body_2d.gd" id="1_kpjcp"]
+[ext_resource type="Script" uid="uid://drkfr5q6q2s3x" path="res://Player.gd" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://d2vmqal1klc5e" path="res://assets/kenney-platformer-pack/Sprites/Characters/Default/character_beige_jump.png" id="2_e80uo"]
 [ext_resource type="Texture2D" uid="uid://c7s5yl0nwjyn7" path="res://assets/kenney-platformer-pack/Sprites/Characters/Default/character_beige_walk_a.png" id="2_kne1u"]
 [ext_resource type="Texture2D" uid="uid://c36v60mjw4nl0" path="res://assets/kenney-platformer-pack/Sprites/Characters/Default/character_beige_walk_b.png" id="3_e80uo"]
@@ -41,7 +41,7 @@ size = Vector2(76, 97)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frvxr"]
 size = Vector2(76, 97)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1295228391]
+[node name="Player" type="CharacterBody2D" unique_id=1295228391]
 collision_mask = 2
 script = ExtResource("1_kpjcp")
 

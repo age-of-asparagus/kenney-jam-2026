@@ -16,8 +16,7 @@
 [node name="Scene_tileset" parent="." unique_id=1550837718 instance=ExtResource("3_a6cgp")]
 tile_map_data = PackedByteArray("AAApAAcABwAAAAAAAQASAAcABwAAAAAAAQAcAAcABwAAAAAAAgA=")
 
-[node name="CharacterBody2D" parent="." unique_id=1295228391 instance=ExtResource("2_1f7nv")]
-position = Vector2(213, 21)
+[node name="Player" parent="." unique_id=1295228391 instance=ExtResource("2_1f7nv")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2090488941]
 
@@ -32,24 +31,6 @@ position = Vector2(-4, 285)
 
 [node name="death_bottom" parent="." unique_id=2007452421 instance=ExtResource("7_dcqmi")]
 position = Vector2(694, 977)
-
-[node name="Jump_Pads" type="Node2D" parent="." unique_id=1884962929]
-
-[node name="Jump_Pad3" parent="Jump_Pads" unique_id=1425494252 instance=ExtResource("3_a6cgp")]
-position = Vector2(7347, 771)
-
-[node name="Jump_Pad" parent="Jump_Pads" unique_id=1292080956 instance=ExtResource("3_a6cgp")]
-position = Vector2(1183, 509)
-
-[node name="Jump_Pad5" parent="Jump_Pads" unique_id=1852327879 instance=ExtResource("3_a6cgp")]
-position = Vector2(1247, -314)
-rotation = 3.1415927
-
-[node name="Jump_Pad2" parent="Jump_Pads" unique_id=1023220926 instance=ExtResource("3_a6cgp")]
-position = Vector2(2591, 509)
-
-[node name="Jump_Pad4" parent="Jump_Pads" unique_id=1429363035 instance=ExtResource("3_a6cgp")]
-position = Vector2(3554, 385)
 
 [node name="AudioStreamPlayer-BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=680660511]
 stream = ExtResource("8_psb46")
