@@ -5,6 +5,7 @@ extends Control
 @onready var audio_stream_player_hover: AudioStreamPlayer = $AudioStreamPlayerHover
 
 func _on_start_pressed() -> void:
+	Global.reset()
 	audio_stream_player.play()
 	await $AudioStreamPlayer.finished
 	get_tree().change_scene_to_packed(GameScene)
