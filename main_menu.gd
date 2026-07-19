@@ -4,6 +4,19 @@ extends Control
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 @onready var audio_stream_player_hover: AudioStreamPlayer = $AudioStreamPlayerHover
 
+func _ready():
+	if Global.checkpoint_reached == 0:
+		$MarginContainer/HBoxContainer/VBoxContainer2/Level2.hide()
+		$MarginContainer/HBoxContainer/VBoxContainer2/Level3.hide()
+		$MarginContainer/HBoxContainer/VBoxContainer2/Level4.hide()
+	elif Global.checkpoint_reached == 1:
+		$MarginContainer/HBoxContainer/VBoxContainer2/Level3.hide()
+		$MarginContainer/HBoxContainer/VBoxContainer2/Level4.hide()
+	elif Global.checkpoint_reached == 2:
+		$MarginContainer/HBoxContainer/VBoxContainer2/Level4.hide()
+
+
+
 func play_click():
 	audio_stream_player.play()
 	await $AudioStreamPlayer.finished
