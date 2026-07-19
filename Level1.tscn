@@ -51,14 +51,6 @@ volume_db = -15.0
 autoplay = true
 parameters/looping = true
 
-[node name="Foreground" type="Node2D" parent="." unique_id=751551204]
-
-[node name="Death_Wall" parent="Foreground" unique_id=702217457 instance=ExtResource("5_tdx0m")]
-position = Vector2(-248, 288)
-
-[node name="death_bottom" parent="Foreground" unique_id=2007452421 instance=ExtResource("6_wwg42")]
-position = Vector2(23272, 1120)
-
 [node name="Level_Flags" type="Node2D" parent="." unique_id=1890124994]
 
 [node name="checkpoint_flag" parent="Level_Flags" unique_id=954504920 instance=ExtResource("13_wapi5")]
@@ -76,6 +68,14 @@ level = 3
 [node name="checkpoint_flag4" parent="Level_Flags" unique_id=287607438 instance=ExtResource("13_wapi5")]
 position = Vector2(34464, -32)
 level = 4
+
+[node name="Foreground" type="Node2D" parent="." unique_id=751551204]
+
+[node name="Death_Wall" parent="Foreground" unique_id=702217457 instance=ExtResource("5_tdx0m")]
+position = Vector2(-248, 288)
+
+[node name="death_bottom" parent="Foreground" unique_id=2007452421 instance=ExtResource("6_wwg42")]
+position = Vector2(23272, 1120)
 
 [connection signal="body_entered" from="Scene_tileset/Win_Block" to="Scene_tileset/Win_Block" method="_on_body_entered"]
 [connection signal="toggled_on" from="Switches/SwitchSizeBlue" to="CanvasLayer/HUD" method="_on_switch_toggled_on"]
