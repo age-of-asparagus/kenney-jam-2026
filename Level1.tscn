@@ -20,7 +20,7 @@
 [node name="Scene_tileset" parent="." unique_id=1550837718 instance=ExtResource("7_63dbn")]
 tile_map_data = PackedByteArray("AAASAAcABwAAAAAAAQAeAAUABwAAAAAAAQBdAAwABwAAAAAAAQBhAAkABwAAAAAAAQBmAAYABwAAAAAAAQAaAAcABwAAAAAAAQBuAAMABwAAAAAAAQAmAAIABwAAAAAAAgBCAAIABwAAAAAAAgA=")
 
-[node name="CharacterBody2D" parent="." unique_id=1295228391 instance=ExtResource("2_igy5n")]
+[node name="Player" parent="." unique_id=1295228391 instance=ExtResource("2_igy5n")]
 position = Vector2(213, 21)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2090488941]
