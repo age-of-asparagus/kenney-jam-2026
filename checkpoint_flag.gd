@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var level = 0
+@export var level : int
 
 func activate():
 	print("hello")
