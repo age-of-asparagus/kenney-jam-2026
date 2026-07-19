@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dhyx0qwbdcmw6" path="res://assets/kenney-platformer-pack/Sprites/Tiles/Default/terrain_stone_block_top_left.png" id="4_0rfuo"]
 [ext_resource type="Texture2D" uid="uid://bw5s12ccw255q" path="res://assets/kenney-platformer-pack/Sprites/Tiles/Default/terrain_stone_block_top_right.png" id="5_y745g"]
 [ext_resource type="Texture2D" uid="uid://ch5leeyixbskx" path="res://assets/kenney-platformer-pack/Sprites/Tiles/Default/terrain_stone_block_center.png" id="6_ls5gx"]
+[ext_resource type="Texture2D" uid="uid://b6f2vkt2oit1f" path="res://assets/kenney-platformer-pack/Sprites/Tiles/Default/terrain_stone_block_left.png" id="7_0rfuo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67acf"]
 size = Vector2(1000, 10000)
@@ -399,3 +400,11 @@ rotation = 1.5707964
 texture = ExtResource("6_ls5gx")
 region_enabled = true
 region_rect = Rect2(0, 0, 2176, 1920)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1152878663]
+texture_repeat = 2
+position = Vector2(-1056, -1120)
+rotation = 1.5707964
+texture = ExtResource("7_0rfuo")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 1920)
