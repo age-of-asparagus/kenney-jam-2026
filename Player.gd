@@ -6,7 +6,6 @@ var speed = 200
 var jumpforce = 700
 var gravity = 15
 var mass = 1
-var momentum : float
 
 var Ground_Particles = preload("res://walking_particles.tscn")
 var Block_Particles = preload("res://block_broken.tscn")
@@ -113,9 +112,12 @@ func _on_detector_checkpoints_area_entered(area):
 
 
 func _on_detector_breakable_body_entered(body):
-	momentum = mass*velocity.length()
+	var collision_direction = (global_position-body.global_position).normalized()
+	var momentum = Vector2(velocity.x*mass, velocity.y*mass)
+	var impact = abs(momentum.dot(collision_direction))
 	print(momentum)
-	if momentum >= body.durability:
+	print(impact)
+	if impact >= body.durability:
 		var block_particles = Block_Particles.instantiate()
 		block_particles.global_position = body.global_position
 		block_particles.emitting = true
