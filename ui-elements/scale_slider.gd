@@ -8,8 +8,31 @@ var internal_value: float # where the slider should be
 var tween: Tween
 var is_dragging_grabber: bool = false
 
+func _on_resized():
+	pivot_offset = size / 2.0
+
+func particles():
+	$CPUParticles2D.emitting=true
+	var tween = create_tween()
+	tween.tween_property(self, "scale", Vector2(1.2, 1.2), 0.1) \
+		.set_trans(Tween.TRANS_QUAD) \
+		.set_ease(Tween.EASE_OUT)
+		
+	# Phase 2: Snap back down with a bouncy overshoot
+	tween.tween_property(self, "scale", Vector2(1.0, 1.0), 0.3) \
+		.set_trans(Tween.TRANS_BACK) \
+		.set_ease(Tween.EASE_OUT)
+
 func _ready() -> void:
 	internal_value = value
+	
+	# Need to change pivot for pulse to look good from center
+	# Set the pivot to the exact center of the node
+	pivot_offset = size / 2.0
+	
+	# Optional but recommended: If your slider might change size 
+	# (e.g., window resize), update the pivot whenever it resizes.
+	resized.connect(_on_resized)
 
 func _on_value_changed(new_value: float) -> void:
 	

@@ -9,13 +9,16 @@
 [ext_resource type="PackedScene" uid="uid://cycn3nwdnhutw" path="res://Scene_Tileset.tscn" id="7_63dbn"]
 [ext_resource type="AudioStream" uid="uid://deahhoq7fd2pn" path="res://assets/viacheslavstarostin-chinese-lunar-new-year-465871.mp3" id="8_6o4c3"]
 [ext_resource type="PackedScene" uid="uid://cyn58xmj0hoax" path="res://switch.tscn" id="9_5py54"]
+[ext_resource type="PackedScene" uid="uid://dna7e2bb12fba" path="res://switchMassRed.tscn" id="10_wapi5"]
+[ext_resource type="PackedScene" uid="uid://go0u6p4qvte1" path="res://switchGravYellow.tscn" id="11_a2cb0"]
+[ext_resource type="PackedScene" uid="uid://fsbwwyt541uc" path="res://switchSpeedGreen.tscn" id="13_g56ap"]
 
 [node name="world" type="Node2D" unique_id=202505794]
 
 [node name="Background" parent="." unique_id=1540794392 instance=ExtResource("1_iwo04")]
 
 [node name="Scene_tileset" parent="." unique_id=1550837718 instance=ExtResource("7_63dbn")]
-tile_map_data = PackedByteArray("AAASAAcABwAAAAAAAQAeAAUABwAAAAAAAQBdAAwABwAAAAAAAQBhAAkABwAAAAAAAQBmAAYABwAAAAAAAQAaAAcABwAAAAAAAQBuAAMABwAAAAAAAQA=")
+tile_map_data = PackedByteArray("AAASAAcABwAAAAAAAQAeAAUABwAAAAAAAQBdAAwABwAAAAAAAQBhAAkABwAAAAAAAQBmAAYABwAAAAAAAQAaAAcABwAAAAAAAQBuAAMABwAAAAAAAQAmAAIABwAAAAAAAgBCAAIABwAAAAAAAgA=")
 
 [node name="CharacterBody2D" parent="." unique_id=1295228391 instance=ExtResource("2_igy5n")]
 position = Vector2(213, 21)
@@ -39,6 +42,15 @@ parameters/looping = true
 [node name="SwitchSizeBlue" parent="Switches" unique_id=733603006 instance=ExtResource("9_5py54")]
 position = Vector2(3232, 160)
 
+[node name="SwitchMassRed" parent="Switches" unique_id=678347909 instance=ExtResource("10_wapi5")]
+position = Vector2(608, 416)
+
+[node name="SwitchGravYellow" parent="Switches" unique_id=691682313 instance=ExtResource("11_a2cb0")]
+position = Vector2(672, 416)
+
+[node name="SwitchSpeedGreen" parent="Switches" unique_id=1346936651 instance=ExtResource("13_g56ap")]
+position = Vector2(736, 416)
+
 [node name="Foreground" type="Node2D" parent="." unique_id=751551204]
 
 [node name="Death_Wall" parent="Foreground" unique_id=702217457 instance=ExtResource("5_tdx0m")]
@@ -48,3 +60,6 @@ position = Vector2(-248, 288)
 position = Vector2(694, 977)
 
 [connection signal="toggled_on" from="Switches/SwitchSizeBlue" to="CanvasLayer/HUD" method="_on_switch_toggled_on"]
+[connection signal="toggled_on" from="Switches/SwitchMassRed" to="CanvasLayer/HUD" method="_on_switch_toggled_on"]
+[connection signal="toggled_on" from="Switches/SwitchGravYellow" to="CanvasLayer/HUD" method="_on_switch_toggled_on"]
+[connection signal="toggled_on" from="Switches/SwitchSpeedGreen" to="CanvasLayer/HUD" method="_on_switch_toggled_on"]

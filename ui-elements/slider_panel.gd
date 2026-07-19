@@ -52,6 +52,7 @@ func enable_slider(slider_index:int, enabled:=true):
 	label.text = slider_label_values[slider_index-1]
 	slider.add_theme_stylebox_override("grabber_area", slider_texture[slider_index-1])
 	slider.add_theme_stylebox_override("grabber_area_highlight", slider_texture[slider_index-1])
+	slider.particles()
 	$AudioStreamPlayer.play()
 
 func _on_h_slider_1_value_changed(value: float) -> void:
