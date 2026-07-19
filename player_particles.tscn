@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://chhyittgt576x"]
+
+[node name="player_particles" type="CPUParticles2D" unique_id=628511798]
+top_level = true
+emitting = false
+amount = 100
+lifetime = 10.0
+one_shot = true
+explosiveness = 1.0
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 500)
+initial_velocity_min = 50.0
+initial_velocity_max = 250.0
+scale_amount_min = 2.0
+scale_amount_max = 7.0
+color = Color(0.72156864, 0.49803922, 0.47843137, 1)

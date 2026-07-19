@@ -1,5 +1,7 @@
 extends CharacterBody2D
  
+var player_dead = false
+
 var jump_speed = 200
 var size = 1
 var speed = 200
@@ -9,7 +11,8 @@ var mass = 1
 
 var Ground_Particles = preload("res://walking_particles.tscn")
 var Block_Particles = preload("res://block_broken.tscn")
-var Death_Particles = preload("res://death_particles.tscn")
+var Player_Particles = preload("res://player_particles.tscn")
+var Player_Head = preload("res://player_head.tscn")
 
 enum State {
 	WALKING,
@@ -22,6 +25,8 @@ func _ready():
 
 
 func _physics_process(delta):
+	
+	print(global_position)
 	
 	# Adjust music speed based on Global speed
 	$"../AudioStreamPlayer-BackgroundMusic".set_pitch_scale(Global.speed/50.0)
@@ -80,20 +85,21 @@ func _physics_process(delta):
 
 
 func die():
+	player_dead = true
+	var player_particles = Player_Particles.instantiate()
+	var player_head = Player_Head.instantiate()
+	get_parent().add_child(player_head)
+	get_parent().add_child(player_particles)
+	player_particles.global_position = global_position
+	player_particles.emitting = true
+	player_head.global_position = global_position
+	player_head.emitting = true
+	
 	set_physics_process(false)
 	visible = false
 	
-	var death_particles = Death_Particles.instantiate()
-	death_particles.global_position = global_position
-	death_particles.get_node("player_particles").emitting = true
-	death_particles.get_node("player_head").emitting = true
-	get_parent().add_child(death_particles)
-	
 	$"AudioStreamPlayer-Die".play()
 	await $"AudioStreamPlayer-Die".finished
-	
-	Global.size = 50
-	Global.speed = 50
 	
 	get_tree().change_scene_to_file("res://main_menu.tscn")
 
@@ -105,7 +111,7 @@ func _on_detector_obstacles_area_entered(area):
 
 
 func _on_animated_sprite_2d_animation_looped():
-	if $AnimatedSprite2D.animation == "walking":
+	if $AnimatedSprite2D.animation == "walking" and not player_dead:
 		var ground_particles = Ground_Particles.instantiate()
 		ground_particles.global_position = $ground_particle_position.global_position
 		ground_particles.scale_amount_min *= mass
