@@ -32,7 +32,7 @@ layout_mode = 2
 stream = ExtResource("5_1xsix")
 
 [connection signal="value_changed" from="MarginContainer/ScalingPanel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer3/HSlider2" to="." method="_on_h_slider_2_value_changed"]
-[connection signal="value_changed" from="MarginContainer/ScalingPanel/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/HSlider3" to="." method="_on_h_slider_3_value_changed"]
 [connection signal="value_changed" from="MarginContainer/ScalingPanel/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3/HSlider4" to="." method="_on_h_slider_4_value_changed"]
+[connection signal="value_changed" from="MarginContainer/ScalingPanel/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/HSlider3" to="." method="_on_h_slider_3_value_changed"]
 
 [editable path="MarginContainer/ScalingPanel"]
