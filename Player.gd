@@ -113,6 +113,7 @@ func _on_animated_sprite_2d_animation_looped():
 		ground_particles.scale = Vector2(mass,mass)
 		ground_particles.emitting = true
 		get_parent().add_child(ground_particles)
+		$"AudioStreamPlayer-Steps".play()
 
 
 func _on_detector_checkpoints_area_entered(area):
