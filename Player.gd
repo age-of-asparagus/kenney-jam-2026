@@ -91,24 +91,25 @@ func fade_out():
 	$AnimationPlayer.play("fade_out")
 
 func die():
-	player_dead = true
-	var player_particles = Player_Particles.instantiate()
-	var player_head = Player_Head.instantiate()
-	get_parent().add_child(player_particles)
-	get_parent().add_child(player_head)
-	player_particles.global_position = global_position
-	player_particles.emitting = true
-	player_head.global_position = global_position
-	player_head.emitting = true
-	
-	set_physics_process(false)
-	visible = false
-	
-	$"AudioStreamPlayer-Die".play()
-	await $"AudioStreamPlayer-Die".finished
-	
-	get_tree().call_deferred("change_scene_to_file", "res://main_menu.tscn")
-	#get_tree().change_scene_to_file("res://main_menu.tscn")
+	if player_dead == false:
+		player_dead = true
+		var player_particles = Player_Particles.instantiate()
+		var player_head = Player_Head.instantiate()
+		get_parent().add_child(player_particles)
+		get_parent().add_child(player_head)
+		player_particles.global_position = global_position
+		player_particles.emitting = true
+		player_head.global_position = global_position
+		player_head.emitting = true
+		
+		set_physics_process(false)
+		visible = false
+		
+		$"AudioStreamPlayer-Die".play()
+		await $"AudioStreamPlayer-Die".finished
+		
+		get_tree().call_deferred("change_scene_to_file", "res://main_menu.tscn")
+		#get_tree().change_scene_to_file("res://main_menu.tscn")
 
 
 func _on_detector_obstacles_area_entered(area):
