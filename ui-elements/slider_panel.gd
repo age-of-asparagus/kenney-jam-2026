@@ -48,7 +48,6 @@ func _ready() -> void:
 	for slider_index in len(sliders):
 		if Global.sliders_activated[slider_index]:
 			# deactivated by default, need to turn on if continuing and already on
-			var slider: ScaleSlider = sliders[slider_index]
 			enable_slider(slider_index+1)
 		
 
