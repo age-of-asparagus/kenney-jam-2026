@@ -99,14 +99,13 @@ func die():
 	player_head.global_position = global_position
 	player_head.emitting = true
 	
-	set_physics_process(false)
+	#set_physics_process(false)
 	visible = false
 	
 	$"AudioStreamPlayer-Die".play()
 	await $"AudioStreamPlayer-Die".finished
 	
 	get_tree().change_scene_to_file("res://main_menu.tscn")
-
 
 
 func _on_detector_obstacles_area_entered(area):
@@ -124,7 +123,8 @@ func _on_animated_sprite_2d_animation_looped():
 		ground_particles.emitting = true
 		get_parent().add_child(ground_particles)
 		
-		$"AudioStreamPlayer-Steps".pitch_scale = (50-Global.mass)*2+1
+		#$"AudioStreamPlayer-Steps".pitch_scale = (50-Global.mass)*2+1
+		#$"AudioStreamPlayer-Steps".volume_db = (Global.mass-50)/40
 		$"AudioStreamPlayer-Steps".play()
 
 
