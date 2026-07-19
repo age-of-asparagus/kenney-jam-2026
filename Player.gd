@@ -29,7 +29,7 @@ func _physics_process(delta):
 	print(global_position)
 	
 	# Adjust music speed based on Global speed
-	$"../AudioStreamPlayer-BackgroundMusic".set_pitch_scale(Global.speed/50.0)
+	#$"../AudioStreamPlayer-BackgroundMusic".set_pitch_scale(Global.speed/50.0)
 	
 	mass = (1/3.0)*3**(Global.mass/50)
 	
@@ -125,7 +125,7 @@ func _on_animated_sprite_2d_animation_looped():
 		get_parent().add_child(ground_particles)
 		
 		#$"AudioStreamPlayer-Steps".pitch_scale = (50-Global.mass)*2+1
-		#$"AudioStreamPlayer-Steps".volume_db = (Global.mass-50)/40
+		$"AudioStreamPlayer-Steps".volume_db = 0.0028 * pow(Global.mass, 2) + 0.06 * Global.mass - 10.0
 		$"AudioStreamPlayer-Steps".play()
 
 

@@ -120,6 +120,7 @@ stream = ExtResource("7_dtqjt")
 
 [node name="AudioStreamPlayer-Steps" type="AudioStreamPlayer" parent="." unique_id=1029195515]
 stream = SubResource("AudioStreamRandomizer_kpsxj")
+volume_db = -10.162
 
 [connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]
 [connection signal="body_entered" from="detector_breakable" to="." method="_on_detector_breakable_body_entered"]
