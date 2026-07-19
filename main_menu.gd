@@ -25,7 +25,8 @@ func _on_continue_pressed() -> void:
 func _on_level_2_pressed() -> void:
 	Global.reset()
 	Global.sliders_activated[0]=true
-	Global.spawn = Vector2(6400, 100)
+	#Global.spawn = Vector2(6400, 100)
+	Global.spawn = Vector2(10496, 0)
 	play_game()
 
 

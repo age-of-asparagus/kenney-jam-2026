@@ -2,11 +2,13 @@
 
 [ext_resource type="Script" uid="uid://bxbgddkp8ptvi" path="res://breakable_block.gd" id="1_20sil"]
 [ext_resource type="Texture2D" uid="uid://cyysnuirq7qhg" path="res://assets/kenney-platformer-pack/Vector/Tiles/block_empty.svg" id="2_a7jpp"]
+[ext_resource type="AudioStream" uid="uid://0on382k7ncyu" path="res://assets/kenney_sci-fi-sounds/Audio/explosionCrunch_002.ogg" id="3_a7jpp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67acf"]
 size = Vector2(64, 64)
 
 [node name="Breakable_Block" type="StaticBody2D" unique_id=1444707061]
+modulate = Color(1, 0.8392157, 0.84313726, 1)
 collision_layer = 32
 collision_mask = 0
 script = ExtResource("1_20sil")
@@ -17,3 +19,8 @@ texture = ExtResource("2_a7jpp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1663841325]
 shape = SubResource("RectangleShape2D_67acf")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=998085778]
+stream = ExtResource("3_a7jpp")
+volume_db = -5.0
+pitch_scale = 1.5
