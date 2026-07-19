@@ -71,9 +71,13 @@ func _physics_process(delta):
 		$AnimatedSprite2D.flip_h = false
 		up_direction.y = -1
 	
+	var gravity_velocity = velocity.y
 	velocity.y += gravity
 	
 	move_and_slide()
+	
+	if not is_on_floor():
+		velocity.y = gravity_velocity + gravity
 	
 	match state:
 		State.WALKING:
