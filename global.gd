@@ -1,7 +1,7 @@
 extends Node
 
 var sliders_activated = [false, false, false, false]
-var checkpoint_reached = 0
+var level = 0
 
 var spawn = Vector2.ZERO
 
@@ -30,5 +30,5 @@ func new_game_reset():
 	speed = 50
 	gravity = 100
 	mass = 50
-	checkpoint_reached = 0
+	level = 0
 	sliders_activated = [false, false, false, false]

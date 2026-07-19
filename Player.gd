@@ -26,8 +26,6 @@ func _ready():
 
 func _physics_process(delta):
 	
-	print(global_position)
-	
 	# Adjust music speed based on Global speed
 	#$"../AudioStreamPlayer-BackgroundMusic".set_pitch_scale(Global.speed/50.0)
 	
@@ -135,7 +133,6 @@ func _on_animated_sprite_2d_animation_looped():
 func _on_detector_checkpoints_area_entered(area):
 	Global.spawn = area.global_position + Vector2(0,-20)
 	area.activate()
-	Global.checkpoint_reached += 1
 	$"AudioStreamPlayer-Checkpoint".play()
 
 
