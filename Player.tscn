@@ -5,7 +5,12 @@
 [ext_resource type="Texture2D" uid="uid://c7s5yl0nwjyn7" path="res://assets/kenney-platformer-pack/Sprites/Characters/Default/character_beige_walk_a.png" id="2_kne1u"]
 [ext_resource type="Texture2D" uid="uid://c36v60mjw4nl0" path="res://assets/kenney-platformer-pack/Sprites/Characters/Default/character_beige_walk_b.png" id="3_e80uo"]
 [ext_resource type="AudioStream" uid="uid://b05wc13dcms21" path="res://assets/kenney-platformer-pack/Sounds/sfx_jump.ogg" id="5_cxr5p"]
+[ext_resource type="AudioStream" uid="uid://83sqputkjtvo" path="res://assets/kenney_impact-sounds/Audio/footstep_wood_000.ogg" id="7_3tkgg"]
 [ext_resource type="AudioStream" uid="uid://btpsan5qwfxec" path="res://assets/kenney-platformer-pack/Sounds/sfx_disappear.ogg" id="7_dtqjt"]
+[ext_resource type="AudioStream" uid="uid://11imdrkrw4at" path="res://assets/kenney_impact-sounds/Audio/footstep_wood_001.ogg" id="8_l6ohk"]
+[ext_resource type="AudioStream" uid="uid://dg08yg82eqkcn" path="res://assets/kenney_impact-sounds/Audio/footstep_wood_002.ogg" id="9_oudfo"]
+[ext_resource type="AudioStream" uid="uid://c21ajyfilmp2h" path="res://assets/kenney_impact-sounds/Audio/footstep_wood_003.ogg" id="10_d6rpx"]
+[ext_resource type="AudioStream" uid="uid://cls3udu8n7gn1" path="res://assets/kenney_impact-sounds/Audio/footstep_wood_004.ogg" id="11_r3kul"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0kv70"]
 size = Vector2(76, 97)
@@ -44,6 +49,15 @@ size = Vector2(76, 97)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frvxr"]
 size = Vector2(76, 97)
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_kpsxj"]
+random_pitch = 1.0704124
+streams_count = 5
+stream_0/stream = ExtResource("7_3tkgg")
+stream_1/stream = ExtResource("8_l6ohk")
+stream_2/stream = ExtResource("9_oudfo")
+stream_3/stream = ExtResource("10_d6rpx")
+stream_4/stream = ExtResource("11_r3kul")
+
 [node name="Player" type="CharacterBody2D" unique_id=1295228391]
 collision_mask = 2
 script = ExtResource("1_kpjcp")
@@ -57,6 +71,7 @@ shape = SubResource("RectangleShape2D_0kv70")
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_67acf")
 animation = &"walking"
+frame_progress = 0.8735022
 
 [node name="detector_jumps" type="Area2D" parent="." unique_id=8924453]
 collision_layer = 0
@@ -102,6 +117,9 @@ position = Vector2(0, 48)
 
 [node name="AudioStreamPlayer-Die" type="AudioStreamPlayer" parent="." unique_id=268873250]
 stream = ExtResource("7_dtqjt")
+
+[node name="AudioStreamPlayer-Steps" type="AudioStreamPlayer" parent="." unique_id=1029195515]
+stream = SubResource("AudioStreamRandomizer_kpsxj")
 
 [connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]
 [connection signal="body_entered" from="detector_breakable" to="." method="_on_detector_breakable_body_entered"]

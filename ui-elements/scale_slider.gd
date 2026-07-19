@@ -13,13 +13,13 @@ func _on_resized():
 
 func particles():
 	$CPUParticles2D.emitting=true
-	var tween = create_tween()
-	tween.tween_property(self, "scale", Vector2(1.2, 1.2), 0.1) \
+	var tween2 = create_tween()
+	tween2.tween_property(self, "scale", Vector2(1.2, 1.2), 0.1) \
 		.set_trans(Tween.TRANS_QUAD) \
 		.set_ease(Tween.EASE_OUT)
 		
 	# Phase 2: Snap back down with a bouncy overshoot
-	tween.tween_property(self, "scale", Vector2(1.0, 1.0), 0.3) \
+	tween2.tween_property(self, "scale", Vector2(1.0, 1.0), 0.3) \
 		.set_trans(Tween.TRANS_BACK) \
 		.set_ease(Tween.EASE_OUT)
 
