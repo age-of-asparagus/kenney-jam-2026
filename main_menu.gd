@@ -59,5 +59,5 @@ func _on_level_4_pressed() -> void:
 	Global.sliders_activated[3]=true
 	Global.sliders_activated[0]=true
 	#Global.spawn = Vector2(396*64, 14*64)
-	Global.spawn = Vector2(33500, -150)
+	Global.spawn = Vector2(34000, -150)
 	play_game()
