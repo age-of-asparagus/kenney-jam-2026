@@ -8,16 +8,26 @@ extends NinePatchRect
 @onready var label_2: Label = $MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer3/Label2
 @onready var label_3: Label = $MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/Label3
 @onready var label_4: Label = $MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3/Label4
+const SLIDER_BLUE = preload("res://ui-elements/slider_blue.tres")
+const SLIDER_GREEN = preload("res://ui-elements/slider_green.tres")
+const SLIDER_RED = preload("res://ui-elements/slider_red.tres")
+const SLIDER_YELLOW = preload("res://ui-elements/slider_yellow.tres")
 
 var sliders = []
 var slider_labels = []
 
+var slider_texture = [
+	SLIDER_BLUE,
+	SLIDER_GREEN,
+	SLIDER_RED,
+	SLIDER_YELLOW
+]
 
 var slider_label_values = [
-		"SIZE:",
-		"SPEED:",
-		"GRAV:",
-		"MASS:",
+		"SIZE: ",
+		"SPEED: ",
+		"GRAV: ",
+		"MASS: ",
 	]
 
 func _ready() -> void:
@@ -34,16 +44,15 @@ func _ready() -> void:
 		h_slider_3,
 		h_slider_4
 	]
-	
-
 
 func enable_slider(slider_index:int, enabled:=true):
 	var slider: HSlider = sliders[slider_index-1] #given 1-4 but index is 0-3
 	var label: Label = slider_labels[slider_index-1]
 	slider.editable = enabled
 	label.text = slider_label_values[slider_index-1]
-	
-			
+	slider.add_theme_stylebox_override("grabber_area", slider_texture[slider_index-1])
+	slider.add_theme_stylebox_override("grabber_area_highlight", slider_texture[slider_index-1])
+	$AudioStreamPlayer.play()
 
 func _on_h_slider_1_value_changed(value: float) -> void:
 	#audio_stream_player.play()
