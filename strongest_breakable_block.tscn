@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://naj6b0w5gpn8"]
 
 [ext_resource type="PackedScene" uid="uid://c6wqoc1uatjlu" path="res://breakable_block.tscn" id="1_y5rgt"]
-[ext_resource type="Texture2D" uid="uid://cw1lwvdp8hdr2" path="res://assets/kenney-platformer-pack/Sprites/Tiles/Default/block_strong_empty.png" id="2_5k0fm"]
+[ext_resource type="Texture2D" uid="uid://cq5jpiouidjqr" path="res://assets/kenney-platformer-pack/Sprites/Tiles/Default/block_empty.png" id="2_5k0fm"]
 
 [node name="Strongest_Breakable_Block" unique_id=1444707061 instance=ExtResource("1_y5rgt")]
 durability = 2000
