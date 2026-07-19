@@ -37,6 +37,7 @@ func _physics_process(delta):
 		Global.pause_size_increase = false
 	
 	size = (1/3.0)*3**(Global.size/50)
+	global_position.y += (scale.y - size) * 48.5
 	scale = Vector2(size,size)
 	
 	state = State.WALKING
