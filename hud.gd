@@ -8,6 +8,8 @@ extends Control
 func enable_slider(slider_index:int, enabled:=true):
 	$MarginContainer/ScalingPanel.enable_slider(slider_index, enabled)
 
+func _ready() -> void:
+	self.visible = true
 
 func _on_switch_toggled_on(slider_index) -> void:
 	enable_slider(slider_index)

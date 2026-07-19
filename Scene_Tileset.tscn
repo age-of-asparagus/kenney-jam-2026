@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bt5pt1xp2c7l7" path="res://spring.tscn" id="1_526ql"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_cysje"]
-resource_name = "Spring"
+resource_name = "ActionTiles"
 scenes/1/scene = ExtResource("1_526ql")
 
 [sub_resource type="TileSet" id="TileSet_67acf"]
