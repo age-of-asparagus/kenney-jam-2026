@@ -43,10 +43,13 @@ func _physics_process(delta):
 		velocity.x = jump_speed
 	else:
 		if $detector_jumps.has_overlapping_areas():
+			for spring in $detector_jumps.get_overlapping_areas():
+				spring.activate()
 			velocity.y -= jumpforce * sign(gravity)
 			$"AudioStreamPlayer-Jump".play()
 		jump_speed = speed
 		velocity.x = speed
+	
 	
 	if gravity < 0:
 		rotation = deg_to_rad(180)

@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bt5pt1xp2c7l7"]
+
+[ext_resource type="Texture2D" uid="uid://b030hujxnaqbd" path="res://assets/kenney-platformer-pack/Sprites/Tiles/Default/spring.png" id="1_boyml"]
+[ext_resource type="Script" uid="uid://bj1so2fcjv0ru" path="res://spring.gd" id="1_hpppm"]
+[ext_resource type="Texture2D" uid="uid://cihue23xmywe6" path="res://assets/kenney-platformer-pack/Sprites/Tiles/Default/spring_out.png" id="2_hpppm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_67acf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_boyml")
+}],
+"loop": 1,
+"name": &"spring in",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hpppm")
+}],
+"loop": 1,
+"name": &"spring out",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_67acf"]
+size = Vector2(64, 44)
+
+[node name="Spring" type="Area2D" unique_id=1157999368]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_hpppm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1053697756]
+sprite_frames = SubResource("SpriteFrames_67acf")
+animation = &"spring in"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=396526357]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_67acf")
+
+[node name="Timer" type="Timer" parent="." unique_id=1333599974]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

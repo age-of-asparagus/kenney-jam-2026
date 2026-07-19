@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dn152d54wbq5a" path="res://ui-elements/button.tscn" id="1_06t4h"]
 [ext_resource type="Script" uid="uid://bqd1hnfd6fqqq" path="res://main_menu.gd" id="1_jix8l"]
 [ext_resource type="PackedScene" uid="uid://7bqver4vm3hf" path="res://ui-elements/slider-panel.tscn" id="2_7vrkn"]
-[ext_resource type="PackedScene" uid="uid://b4h6u8shdrqjs" path="res://world_kam_test.tscn" id="2_glbon"]
+[ext_resource type="PackedScene" uid="uid://bp0ema3o6yrdi" path="res://Level1.tscn" id="2_nlkkf"]
 [ext_resource type="AudioStream" uid="uid://bdon6ebix7466" path="res://assets/kenney_ui-audio/Audio/click2.ogg" id="5_nlkkf"]
 [ext_resource type="AudioStream" uid="uid://6h4elebfx2bu" path="res://assets/kenney_ui-audio/Audio/click5.ogg" id="6_nlkkf"]
 
@@ -15,7 +15,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jix8l")
-GameScene = ExtResource("2_glbon")
+GameScene = ExtResource("2_nlkkf")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1364289494]
 layout_mode = 1
