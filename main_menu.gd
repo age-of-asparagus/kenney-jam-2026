@@ -26,17 +26,18 @@ func play_game():
 	get_tree().change_scene_to_packed(GameScene)
 
 func _on_start_pressed() -> void:
-	Global.reset()
+	Global.new_game_reset()
 	play_game()
 
 func _on_start_mouse_entered() -> void:
 	audio_stream_player_hover.play()
 
 func _on_continue_pressed() -> void:
+	Global.continue_reset()
 	play_game()
 
 func _on_level_2_pressed() -> void:
-	Global.reset()
+	Global.continue_reset()
 	Global.sliders_activated[0]=true
 	#Global.spawn = Vector2(6400, 100)
 	Global.spawn = Vector2(10496, 0)
@@ -44,7 +45,7 @@ func _on_level_2_pressed() -> void:
 
 
 func _on_level_3_pressed() -> void:
-	Global.reset()
+	Global.continue_reset()
 	Global.sliders_activated[0]=true
 	Global.sliders_activated[1]=true
 	#Global.spawn = Vector2(113*64, 64)
@@ -53,7 +54,7 @@ func _on_level_3_pressed() -> void:
 
 
 func _on_level_4_pressed() -> void:
-	Global.reset()
+	Global.continue_reset()
 	Global.sliders_activated[1]=true
 	Global.sliders_activated[3]=true
 	Global.sliders_activated[0]=true

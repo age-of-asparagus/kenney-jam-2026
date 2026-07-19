@@ -14,7 +14,15 @@ var speed = 50
 var gravity = 100
 var mass = 50
 
-func reset():
+func continue_reset():
+	gravity = 100
+	size = 50
+	speed = 50
+	mass = 50
+	pause_size_increase = false
+	previous_size = 50
+
+func new_game_reset():
 	spawn = Vector2.ZERO
 	pause_size_increase = false
 	previous_size = 50
