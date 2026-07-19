@@ -9,6 +9,7 @@ var mass = 1
 
 var Ground_Particles = preload("res://walking_particles.tscn")
 var Block_Particles = preload("res://block_broken.tscn")
+var Death_Particles = preload("res://death_particles.tscn")
 
 enum State {
 	WALKING,
@@ -50,7 +51,7 @@ func _physics_process(delta):
 		if $detector_jumps.has_overlapping_areas():
 			for spring in $detector_jumps.get_overlapping_areas():
 				spring.activate()
-			velocity.y -= jumpforce * sign(gravity)
+			velocity.y -= jumpforce * sign(gravity) * 1/mass
 			$"AudioStreamPlayer-Jump".play()
 		jump_speed = speed
 		velocity.x = speed
@@ -79,7 +80,15 @@ func _physics_process(delta):
 
 
 func die():
-
+	set_physics_process(false)
+	visible = false
+	
+	var death_particles = Death_Particles.instantiate()
+	death_particles.global_position = global_position
+	death_particles.get_node("player_particles").emitting = true
+	death_particles.get_node("player_head").emitting = true
+	get_parent().add_child(death_particles)
+	
 	$"AudioStreamPlayer-Die".play()
 	await $"AudioStreamPlayer-Die".finished
 	
@@ -115,8 +124,6 @@ func _on_detector_breakable_body_entered(body):
 	var collision_direction = (global_position-body.global_position).normalized()
 	var momentum = Vector2(velocity.x*mass, velocity.y*mass)
 	var impact = abs(momentum.dot(collision_direction))
-	print(momentum)
-	print(impact)
 	if impact >= body.durability:
 		var block_particles = Block_Particles.instantiate()
 		block_particles.global_position = body.global_position
