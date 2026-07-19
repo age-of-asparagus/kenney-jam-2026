@@ -99,14 +99,13 @@ func die():
 	player_head.global_position = global_position
 	player_head.emitting = true
 	
-	set_physics_process(false)
+	#set_physics_process(false)
 	visible = false
 	
 	$"AudioStreamPlayer-Die".play()
 	await $"AudioStreamPlayer-Die".finished
 	
-	get_tree().call_deferred("change_scene_to_file", "res://main_menu.tscn")
-	#get_tree().change_scene_to_file("res://main_menu.tscn")
+	get_tree().change_scene_to_file("res://main_menu.tscn")
 
 
 func _on_detector_obstacles_area_entered(area):
