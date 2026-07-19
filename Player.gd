@@ -132,6 +132,7 @@ func _on_animated_sprite_2d_animation_looped():
 func _on_detector_checkpoints_area_entered(area):
 	Global.spawn = area.global_position + Vector2(0,-20)
 	area.activate()
+	$"AudioStreamPlayer-Checkpoint".play()
 
 
 func _on_detector_breakable_body_entered(body):

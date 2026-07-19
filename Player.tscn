@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://dg08yg82eqkcn" path="res://assets/kenney_impact-sounds/Audio/footstep_wood_002.ogg" id="9_oudfo"]
 [ext_resource type="AudioStream" uid="uid://c21ajyfilmp2h" path="res://assets/kenney_impact-sounds/Audio/footstep_wood_003.ogg" id="10_d6rpx"]
 [ext_resource type="AudioStream" uid="uid://cls3udu8n7gn1" path="res://assets/kenney_impact-sounds/Audio/footstep_wood_004.ogg" id="11_r3kul"]
+[ext_resource type="AudioStream" uid="uid://c2er0103txr1f" path="res://assets/kenney-platformer-pack/Sounds/sfx_gem.ogg" id="12_l6ohk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0kv70"]
 size = Vector2(76, 97)
@@ -121,6 +122,9 @@ stream = ExtResource("7_dtqjt")
 [node name="AudioStreamPlayer-Steps" type="AudioStreamPlayer" parent="." unique_id=1029195515]
 stream = SubResource("AudioStreamRandomizer_kpsxj")
 volume_db = -10.162
+
+[node name="AudioStreamPlayer-Checkpoint" type="AudioStreamPlayer" parent="." unique_id=1198996288]
+stream = ExtResource("12_l6ohk")
 
 [connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]
 [connection signal="body_entered" from="detector_breakable" to="." method="_on_detector_breakable_body_entered"]
