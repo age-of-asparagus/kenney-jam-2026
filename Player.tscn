@@ -71,7 +71,7 @@ shape = SubResource("RectangleShape2D_0kv70")
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_67acf")
 animation = &"walking"
-frame_progress = 0.8735022
+frame_progress = 0.07106342
 
 [node name="detector_jumps" type="Area2D" parent="." unique_id=8924453]
 collision_layer = 0
