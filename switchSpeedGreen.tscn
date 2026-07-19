@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://fsbwwyt541uc"]
+
+[ext_resource type="PackedScene" uid="uid://cyn58xmj0hoax" path="res://switch.tscn" id="1_egfiv"]
+[ext_resource type="Texture2D" uid="uid://dv0hx8lhbv0dv" path="res://assets/kenney-platformer-pack/Sprites/Tiles/Default/switch_green.png" id="2_vpj2d"]
+[ext_resource type="Texture2D" uid="uid://h16uues4skyt" path="res://assets/kenney-platformer-pack/Sprites/Tiles/Default/switch_green_pressed.png" id="3_e34ot"]
+
+[node name="Switch" unique_id=733603006 instance=ExtResource("1_egfiv")]
+button_texture = ExtResource("2_vpj2d")
+button_pressed_texture = ExtResource("3_e34ot")
+slider = 2
