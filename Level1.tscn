@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bookk06xhk42y" path="res://death_bottom.tscn" id="6_wwg42"]
 [ext_resource type="PackedScene" uid="uid://cycn3nwdnhutw" path="res://jump_pad.tscn" id="7_63dbn"]
 [ext_resource type="AudioStream" uid="uid://deahhoq7fd2pn" path="res://assets/viacheslavstarostin-chinese-lunar-new-year-465871.mp3" id="8_6o4c3"]
+[ext_resource type="PackedScene" uid="uid://cyn58xmj0hoax" path="res://switch.tscn" id="9_5py54"]
 
 [node name="world" type="Node2D" unique_id=202505794]
 
@@ -17,6 +18,7 @@
 position = Vector2(213, 21)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2090488941]
+visible = false
 
 [node name="HUD" parent="CanvasLayer" unique_id=873267030 instance=ExtResource("3_hrtvv")]
 
@@ -54,3 +56,6 @@ stream = ExtResource("8_6o4c3")
 volume_db = -15.0
 autoplay = true
 parameters/looping = true
+
+[node name="Switch" parent="." unique_id=733603006 instance=ExtResource("9_5py54")]
+position = Vector2(864, 480)
