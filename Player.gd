@@ -88,8 +88,8 @@ func die():
 	player_dead = true
 	var player_particles = Player_Particles.instantiate()
 	var player_head = Player_Head.instantiate()
-	get_parent().add_child(player_head)
 	get_parent().add_child(player_particles)
+	get_parent().add_child(player_head)
 	player_particles.global_position = global_position
 	player_particles.emitting = true
 	player_head.global_position = global_position
