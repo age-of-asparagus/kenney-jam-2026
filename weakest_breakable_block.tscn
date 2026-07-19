@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dx274ajr00vj0"]
+
+[ext_resource type="PackedScene" uid="uid://c6wqoc1uatjlu" path="res://breakable_block.tscn" id="1_1pkdq"]
+[ext_resource type="Texture2D" uid="uid://ckwfhd1jil8ub" path="res://assets/kenney-platformer-pack/Sprites/Tiles/Default/block_planks.png" id="2_m2fp1"]
+
+[node name="Weakest_Breakable_Block" unique_id=1444707061 instance=ExtResource("1_1pkdq")]
+durability = 100
+
+[node name="BlockPlanks" parent="." index="0" unique_id=319003534]
+texture = ExtResource("2_m2fp1")

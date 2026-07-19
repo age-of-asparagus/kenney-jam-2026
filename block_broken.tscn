@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b3inlt68d8hl0"]
+
+[ext_resource type="Texture2D" uid="uid://bl7wagv1c8wn5" path="res://assets/kenney-platformer-pack/Vector/Tiles/brick_brown_diagonal.svg" id="1_yis4q"]
+[ext_resource type="Script" uid="uid://cbyci3q5etdyf" path="res://block_broken.gd" id="2_806m3"]
+
+[sub_resource type="Gradient" id="Gradient_tuysu"]
+offsets = PackedFloat32Array(0, 0.5980392, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="Block_Broken" type="CPUParticles2D" unique_id=679837916]
+emitting = false
+texture = ExtResource("1_yis4q")
+one_shot = true
+explosiveness = 1.0
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 150)
+initial_velocity_min = 30.0
+initial_velocity_max = 100.0
+angular_velocity_min = -250.0
+angular_velocity_max = 250.0
+scale_amount_min = 0.25
+scale_amount_max = 0.5
+color_ramp = SubResource("Gradient_tuysu")
+script = ExtResource("2_806m3")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

@@ -9,6 +9,7 @@ var mass = 1
 var momentum : float
 
 var Ground_Particles = preload("res://walking_particles.tscn")
+var Block_Particles = preload("res://block_broken.tscn")
 
 enum State {
 	WALKING,
@@ -115,6 +116,10 @@ func _on_detector_breakable_body_entered(body):
 	momentum = mass*velocity.length()
 	print(momentum)
 	if momentum >= body.durability:
+		var block_particles = Block_Particles.instantiate()
+		block_particles.global_position = body.global_position
+		block_particles.emitting = true
+		get_parent().add_child(block_particles)
 		body.broken()
 	else:
 		body.collision_layer |= 2

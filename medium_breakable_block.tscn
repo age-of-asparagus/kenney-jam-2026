@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b3hbd15ew8gaj"]
+
+[ext_resource type="PackedScene" uid="uid://c6wqoc1uatjlu" path="res://breakable_block.tscn" id="1_qqlwt"]
+[ext_resource type="Texture2D" uid="uid://doos4jwpmbv6i" path="res://assets/kenney-platformer-pack/Sprites/Tiles/Default/block_plank.png" id="2_lf26j"]
+
+[node name="Medium_Breakable_Block" unique_id=1444707061 instance=ExtResource("1_qqlwt")]
+
+[node name="BlockPlanks" parent="." index="0" unique_id=319003534]
+texture = ExtResource("2_lf26j")
