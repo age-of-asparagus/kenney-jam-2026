@@ -1,10 +1,6 @@
 extends Node
 
-var size_activated = false
-var speed_activated = false
-var gravity_activated = false
-var mass_activated = false
-
+var sliders_activated = [false, false, false, false]
 
 var spawn = Vector2.ZERO
 
@@ -25,7 +21,4 @@ func reset():
 	speed = 50
 	gravity = 100
 	mass = 50
-	size_activated = false
-	speed_activated = false
-	gravity_activated = false
-	mass_activated = false
+	sliders_activated = [false, false, false, false]
