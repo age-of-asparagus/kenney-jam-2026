@@ -38,6 +38,12 @@ alignment = 1
 [node name="Start" parent="MarginContainer/VBoxContainer" unique_id=72927890 instance=ExtResource("1_06t4h")]
 layout_mode = 2
 
+[node name="Continue" parent="MarginContainer/VBoxContainer" unique_id=995849393 instance=ExtResource("1_06t4h")]
+layout_mode = 2
+
+[node name="Label" parent="MarginContainer/VBoxContainer/Continue" index="0" unique_id=67436685]
+text = "Continue"
+
 [node name="ScalingPanel" parent="MarginContainer" unique_id=904694342 instance=ExtResource("2_7vrkn")]
 layout_mode = 2
 script = null
@@ -50,3 +56,7 @@ stream = ExtResource("6_nlkkf")
 
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Continue" to="." method="_on_start_mouse_entered"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+
+[editable path="MarginContainer/VBoxContainer/Continue"]

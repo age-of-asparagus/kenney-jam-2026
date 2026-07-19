@@ -11,3 +11,9 @@ func _on_start_pressed() -> void:
 
 func _on_start_mouse_entered() -> void:
 	audio_stream_player_hover.play()
+
+
+func _on_continue_pressed() -> void:
+	audio_stream_player.play()
+	await $AudioStreamPlayer.finished
+	get_tree().change_scene_to_packed(GameScene)
