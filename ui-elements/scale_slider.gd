@@ -1,4 +1,4 @@
-extends HSlider
+class_name ScaleSlider extends HSlider
 
 # The game should use this instead of value_changed to get the smoothed value
 signal tweened_value_changed(new_value: float)

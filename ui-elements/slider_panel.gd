@@ -44,9 +44,16 @@ func _ready() -> void:
 		h_slider_3,
 		h_slider_4
 	]
+	
+	for slider_index in len(sliders):
+		if Global.sliders_activated[slider_index]:
+			# deactivated by default, need to turn on if continuing and already on
+			var slider: ScaleSlider = sliders[slider_index]
+			enable_slider(slider_index+1)
+		
 
 func enable_slider(slider_index:int, enabled:=true):
-	var slider: HSlider = sliders[slider_index-1] #given 1-4 but index is 0-3
+	var slider: ScaleSlider = sliders[slider_index-1] # given 1-4 but index is 0-3
 	var label: Label = slider_labels[slider_index-1]
 	slider.editable = enabled
 	label.text = slider_label_values[slider_index-1]
@@ -54,6 +61,7 @@ func enable_slider(slider_index:int, enabled:=true):
 	slider.add_theme_stylebox_override("grabber_area_highlight", slider_texture[slider_index-1])
 	slider.particles()
 	$AudioStreamPlayer.play()
+	Global.sliders_activated[slider_index-1]=true
 
 func _on_h_slider_1_value_changed(value: float) -> void:
 	#audio_stream_player.play()
