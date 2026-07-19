@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bt5pt1xp2c7l7" path="res://spring.tscn" id="1_526ql"]
 [ext_resource type="PackedScene" uid="uid://da5obb4kr6yju" path="res://checkpoint_flag.tscn" id="2_5jwh7"]
+[ext_resource type="PackedScene" uid="uid://c263khshy7rwv" path="res://win_block.tscn" id="3_ej4ge"]
 [ext_resource type="PackedScene" uid="uid://dx274ajr00vj0" path="res://weakest_breakable_block.tscn" id="3_kpaar"]
 [ext_resource type="PackedScene" uid="uid://naj6b0w5gpn8" path="res://strongest_breakable_block.tscn" id="4_m0511"]
 [ext_resource type="PackedScene" uid="uid://b3hbd15ew8gaj" path="res://medium_breakable_block.tscn" id="5_ej4ge"]
@@ -11,6 +12,7 @@
 resource_name = "ActionTiles"
 scenes/1/scene = ExtResource("1_526ql")
 scenes/2/scene = ExtResource("2_5jwh7")
+scenes/3/scene = ExtResource("3_ej4ge")
 scenes/4/scene = ExtResource("3_kpaar")
 scenes/5/scene = ExtResource("4_m0511")
 scenes/6/scene = ExtResource("5_ej4ge")

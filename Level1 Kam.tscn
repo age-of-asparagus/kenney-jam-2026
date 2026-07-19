@@ -18,7 +18,7 @@
 [node name="Background" parent="." unique_id=1540794392 instance=ExtResource("1_ghony")]
 
 [node name="Scene_tileset" parent="." unique_id=1550837718 instance=ExtResource("2_0m0s3")]
-tile_map_data = PackedByteArray("AAASAAcABwAAAAAAAQAeAAUABwAAAAAAAQBdAAwABwAAAAAAAQBhAAkABwAAAAAAAQBmAAYABwAAAAAAAQAaAAcABwAAAAAAAQBuAAMABwAAAAAAAQAmAAIABwAAAAAAAgBCAAIABwAAAAAAAgA4AAIABwAAAAAABgA4AAEABwAAAAAABgA=")
+tile_map_data = PackedByteArray("AAASAAcABwAAAAAAAQAeAAUABwAAAAAAAQBdAAwABwAAAAAAAQBhAAkABwAAAAAAAQBmAAYABwAAAAAAAQAaAAcABwAAAAAAAQBuAAMABwAAAAAAAQAmAAIABwAAAAAAAgBCAAIABwAAAAAAAgA4AAIABwAAAAAABgA4AAEABwAAAAAABgAPAAcABwAAAAAAAwA=")
 
 [node name="Player" parent="." unique_id=1295228391 instance=ExtResource("3_2nb6v")]
 
@@ -58,6 +58,7 @@ position = Vector2(-248, 288)
 [node name="death_bottom" parent="Foreground" unique_id=2007452421 instance=ExtResource("12_040dx")]
 position = Vector2(694, 977)
 
+[connection signal="body_entered" from="Scene_tileset/Win_Block" to="Scene_tileset/Win_Block" method="_on_body_entered"]
 [connection signal="toggled_on" from="Switches/SwitchSizeBlue" to="CanvasLayer/HUD" method="_on_switch_toggled_on"]
 [connection signal="toggled_on" from="Switches/SwitchMassRed" to="CanvasLayer/HUD" method="_on_switch_toggled_on"]
 [connection signal="toggled_on" from="Switches/SwitchGravYellow" to="CanvasLayer/HUD" method="_on_switch_toggled_on"]

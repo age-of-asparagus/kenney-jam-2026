@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c263khshy7rwv"]
+
+[ext_resource type="Script" uid="uid://cu4swywxu54eq" path="res://win_block.gd" id="1_42wgf"]
+[ext_resource type="Texture2D" uid="uid://cmg2mnsekmcxe" path="res://assets/kenney-platformer-pack/Sprites/Tiles/Default/door_open_top.png" id="2_do0s6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_67acf"]
+size = Vector2(32, 64)
+
+[node name="Win_Block" type="Area2D" unique_id=411062084]
+collision_layer = 0
+script = ExtResource("1_42wgf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=522967474]
+position = Vector2(14, 0)
+shape = SubResource("RectangleShape2D_67acf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=462437957]
+texture = ExtResource("2_do0s6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

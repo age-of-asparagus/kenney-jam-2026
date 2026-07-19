@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dkb05ew3gyqq5"]
+
+[node name="Win_Screen" type="Node2D" unique_id=396371135]
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=492887878]
+offset_left = 583.0
+offset_top = 307.0
+offset_right = 673.0
+offset_bottom = 341.0
+text = "YOU WIN"
