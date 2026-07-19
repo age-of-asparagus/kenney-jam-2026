@@ -4,19 +4,45 @@ extends NinePatchRect
 @onready var h_slider_2: HSlider = $MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer3/HSlider2
 @onready var h_slider_3: HSlider = $MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/HSlider3
 @onready var h_slider_4: HSlider = $MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3/HSlider4
+@onready var label_1: Label = $MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/Label1
+@onready var label_2: Label = $MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer3/Label2
+@onready var label_3: Label = $MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/Label3
+@onready var label_4: Label = $MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3/Label4
+
 var sliders = []
+var slider_labels = []
+
+
+var slider_label_values = [
+		"SIZE:",
+		"SPEED:",
+		"GRAV:",
+		"MASS:",
+	]
 
 func _ready() -> void:
+	
+	slider_labels = [
+		label_1,
+		label_2,
+		label_3,
+		label_4
+	]
 	sliders = [
 		h_slider_1,
 		h_slider_2,
 		h_slider_3,
 		h_slider_4
 	]
+	
+
 
 func enable_slider(slider_index:int, enabled:=true):
-	var slider: HSlider = sliders[slider_index]
+	var slider: HSlider = sliders[slider_index-1] #given 1-4 but index is 0-3
+	var label: Label = slider_labels[slider_index-1]
 	slider.editable = enabled
+	label.text = slider_label_values[slider_index-1]
+	
 			
 
 func _on_h_slider_1_value_changed(value: float) -> void:

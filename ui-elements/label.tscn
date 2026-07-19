@@ -4,6 +4,6 @@
 custom_minimum_size = Vector2(120, 0)
 theme_override_colors/font_color = Color(0.4351923, 0.43519226, 0.43519226, 1)
 theme_override_font_sizes/font_size = 32
-text = "TIME: "
+text = "?: "
 horizontal_alignment = 2
 vertical_alignment = 1

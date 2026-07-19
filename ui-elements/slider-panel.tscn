@@ -4,6 +4,14 @@
 [ext_resource type="Script" uid="uid://b5p1cngb88kdo" path="res://ui-elements/slider_panel.gd" id="2_dt50h"]
 [ext_resource type="PackedScene" uid="uid://lsb0pvh07ecx" path="res://ui-elements/label.tscn" id="2_yk4nu"]
 [ext_resource type="PackedScene" uid="uid://cy4xrchy8iwb0" path="res://ui-elements/scale_slider.tscn" id="3_dt50h"]
+[ext_resource type="Texture2D" uid="uid://b4xv767lbum4f" path="res://assets/kenney_ui-pack/PNG/Blue/Double/slide_hangle.png" id="5_1re2u"]
+[ext_resource type="Texture2D" uid="uid://clqt47pljbgw0" path="res://assets/kenney_ui-pack/PNG/Green/Double/slide_hangle.png" id="6_kgtqf"]
+[ext_resource type="StyleBox" uid="uid://bhwblxd1c3uxv" path="res://ui-elements/slider_blue.tres" id="6_yrdp7"]
+[ext_resource type="StyleBox" uid="uid://bfsss53j0hk6d" path="res://ui-elements/slider_green.tres" id="8_kgtqf"]
+[ext_resource type="Texture2D" uid="uid://bx16wc032m0cf" path="res://assets/kenney_ui-pack/PNG/Yellow/Double/slide_hangle.png" id="8_nusip"]
+[ext_resource type="Texture2D" uid="uid://dhgxmy7k6n0s0" path="res://assets/kenney_ui-pack/PNG/Red/Double/slide_hangle.png" id="10_agyby"]
+[ext_resource type="StyleBox" uid="uid://qblo87yydtv3" path="res://ui-elements/slider_yellow.tres" id="10_kgtqf"]
+[ext_resource type="StyleBox" uid="uid://bk8trsblsmjjq" path="res://ui-elements/slider_red.tres" id="12_kgtqf"]
 
 [node name="ScalingPanel" type="NinePatchRect" unique_id=904694342]
 custom_minimum_size = Vector2(600, 200)
@@ -41,20 +49,25 @@ layout_mode = 2
 
 [node name="Label1" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1274994337 instance=ExtResource("2_yk4nu")]
 layout_mode = 2
-text = "SIZE: "
 
 [node name="HSlider1" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1017894201 instance=ExtResource("3_dt50h")]
 layout_mode = 2
+theme_override_icons/grabber_highlight = ExtResource("5_1re2u")
+theme_override_styles/grabber_area = ExtResource("6_yrdp7")
+theme_override_styles/grabber_area_highlight = ExtResource("6_yrdp7")
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=790619683]
 layout_mode = 2
 
 [node name="Label2" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer3" unique_id=1741878621 instance=ExtResource("2_yk4nu")]
 layout_mode = 2
-text = "SPEED:"
 
 [node name="HSlider2" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer3" unique_id=1603804727 instance=ExtResource("3_dt50h")]
 layout_mode = 2
+theme_override_icons/grabber = ExtResource("6_kgtqf")
+theme_override_icons/grabber_highlight = ExtResource("6_kgtqf")
+theme_override_styles/grabber_area = ExtResource("8_kgtqf")
+theme_override_styles/grabber_area_highlight = ExtResource("8_kgtqf")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=2125360124]
 layout_mode = 2
@@ -66,10 +79,13 @@ layout_mode = 2
 
 [node name="Label3" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer" unique_id=1480880082 instance=ExtResource("2_yk4nu")]
 layout_mode = 2
-text = "GRAV: "
 
 [node name="HSlider3" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer" unique_id=548889922 instance=ExtResource("3_dt50h")]
 layout_mode = 2
+theme_override_icons/grabber = ExtResource("8_nusip")
+theme_override_icons/grabber_highlight = ExtResource("8_nusip")
+theme_override_styles/grabber_area = ExtResource("10_kgtqf")
+theme_override_styles/grabber_area_highlight = ExtResource("10_kgtqf")
 value = 100.0
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=2089647760]
@@ -77,10 +93,13 @@ layout_mode = 2
 
 [node name="Label4" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3" unique_id=1665607612 instance=ExtResource("2_yk4nu")]
 layout_mode = 2
-text = "MASS: "
 
 [node name="HSlider4" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3" unique_id=1114637284 instance=ExtResource("3_dt50h")]
 layout_mode = 2
+theme_override_icons/grabber = ExtResource("10_agyby")
+theme_override_icons/grabber_highlight = ExtResource("10_agyby")
+theme_override_styles/grabber_area = ExtResource("12_kgtqf")
+theme_override_styles/grabber_area_highlight = ExtResource("12_kgtqf")
 
 [connection signal="tweened_value_changed" from="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/HSlider1" to="." method="_on_h_slider_1_value_changed"]
 [connection signal="tweened_value_changed" from="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer3/HSlider2" to="." method="_on_h_slider_2_value_changed"]
