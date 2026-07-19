@@ -8,12 +8,12 @@ func _ready():
 	if Global.checkpoint_reached == 0:
 		$MarginContainer/HBoxContainer/VBoxContainer2/Level2.hide()
 		$MarginContainer/HBoxContainer/VBoxContainer2/Level3.hide()
-		$MarginContainer/HBoxContainer/VBoxContainer2/Level4.hide()
+		#$MarginContainer/HBoxContainer/VBoxContainer2/Level4.hide()
 	elif Global.checkpoint_reached == 1:
 		$MarginContainer/HBoxContainer/VBoxContainer2/Level3.hide()
-		$MarginContainer/HBoxContainer/VBoxContainer2/Level4.hide()
-	elif Global.checkpoint_reached == 2:
-		$MarginContainer/HBoxContainer/VBoxContainer2/Level4.hide()
+		#$MarginContainer/HBoxContainer/VBoxContainer2/Level4.hide()
+	#elif Global.checkpoint_reached == 2:
+		#$MarginContainer/HBoxContainer/VBoxContainer2/Level4.hide()
 
 
 
@@ -57,5 +57,6 @@ func _on_level_4_pressed() -> void:
 	Global.sliders_activated[1]=true
 	Global.sliders_activated[3]=true
 	Global.sliders_activated[0]=true
-	Global.spawn = Vector2(396*64, 14*64)
+	#Global.spawn = Vector2(396*64, 14*64)
+	Global.spawn = Vector2(33500, -150)
 	play_game()
