@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://da5obb4kr6yju"]
+
+[ext_resource type="Script" uid="uid://kpuqx018ntho" path="res://checkpoint_flag.gd" id="1_jtoom"]
+[ext_resource type="Texture2D" uid="uid://b1so212civhrs" path="res://assets/kenney-platformer-pack/Vector/Tiles/flag_green_a.svg" id="2_gnhim"]
+[ext_resource type="Texture2D" uid="uid://c8mxx20fxcir8" path="res://assets/kenney-platformer-pack/Vector/Tiles/flag_green_b.svg" id="3_0khjw"]
+[ext_resource type="Texture2D" uid="uid://d15ruf1jeks3o" path="res://assets/kenney-platformer-pack/Vector/Tiles/flag_red_a.svg" id="4_6bk4g"]
+[ext_resource type="Texture2D" uid="uid://1c75tqel40ro" path="res://assets/kenney-platformer-pack/Vector/Tiles/flag_red_b.svg" id="5_oli1o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3iike"]
+size = Vector2(64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_67acf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gnhim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0khjw")
+}],
+"loop": 1,
+"name": &"activated",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_6bk4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oli1o")
+}],
+"loop": 1,
+"name": &"unactivated",
+"speed": 5.0
+}]
+
+[node name="checkpoint_flag" type="Area2D" unique_id=954504920]
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("1_jtoom")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=313712105]
+shape = SubResource("RectangleShape2D_3iike")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2112908741]
+sprite_frames = SubResource("SpriteFrames_67acf")
+animation = &"unactivated"
+frame_progress = 0.10590805

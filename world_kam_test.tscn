@@ -14,7 +14,7 @@
 [node name="Background" parent="." unique_id=1540794392 instance=ExtResource("1_q5ugo")]
 
 [node name="Scene_tileset" parent="." unique_id=1550837718 instance=ExtResource("3_a6cgp")]
-tile_map_data = PackedByteArray("AAApAAcABwAAAAAAAQASAAcABwAAAAAAAQA=")
+tile_map_data = PackedByteArray("AAApAAcABwAAAAAAAQASAAcABwAAAAAAAQAcAAcABwAAAAAAAgA=")
 
 [node name="CharacterBody2D" parent="." unique_id=1295228391 instance=ExtResource("2_1f7nv")]
 position = Vector2(213, 21)

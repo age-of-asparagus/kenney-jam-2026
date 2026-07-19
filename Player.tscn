@@ -38,6 +38,9 @@ size = Vector2(41, 97)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67acf"]
 size = Vector2(76, 97)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_frvxr"]
+size = Vector2(76, 97)
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1295228391]
 collision_mask = 2
 script = ExtResource("1_kpjcp")
@@ -66,6 +69,13 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detector_objects" unique_id=1779805235]
 shape = SubResource("RectangleShape2D_67acf")
 
+[node name="detector_checkpoints" type="Area2D" parent="." unique_id=390903166]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detector_checkpoints" unique_id=488203371]
+shape = SubResource("RectangleShape2D_frvxr")
+
 [node name="detector_obstacles" type="Area2D" parent="." unique_id=1537403743]
 collision_layer = 0
 collision_mask = 8
@@ -85,4 +95,5 @@ position = Vector2(0, 48)
 stream = ExtResource("7_dtqjt")
 
 [connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]
+[connection signal="area_entered" from="detector_checkpoints" to="." method="_on_detector_checkpoints_area_entered"]
 [connection signal="area_entered" from="detector_obstacles" to="." method="_on_detector_obstacles_area_entered"]

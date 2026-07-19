@@ -1,7 +1,7 @@
 extends Node
 
 
-
+var spawn : Vector2
 
 var pause_size_increase = false
 

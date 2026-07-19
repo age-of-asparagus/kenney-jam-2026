@@ -31,6 +31,7 @@ window/stretch/scale=0.5
 2d_physics/layer_2="Objects"
 2d_physics/layer_3="Jump_Pads"
 2d_physics/layer_4="Obstacles"
+2d_physics/layer_5="Checkpoints"
 
 [physics]
 
