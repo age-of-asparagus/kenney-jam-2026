@@ -25,7 +25,7 @@ func _ready():
 
 
 func _physics_process(delta):
-	
+	print(Global.level)
 	# Adjust music speed based on Global speed
 	#$"../AudioStreamPlayer-BackgroundMusic".set_pitch_scale(Global.speed/50.0)
 	

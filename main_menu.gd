@@ -42,14 +42,14 @@ func _on_continue_pressed() -> void:
 func _on_level_1_pressed() -> void:
 	Global.continue_reset()
 	Global.sliders_activated[0]=true
+	Global.spawn = Vector2(4256,140)
 	play_game()
 
 func _on_level_2_pressed() -> void:
 	Global.continue_reset()
 	Global.sliders_activated[0]=true
 	Global.sliders_activated[1]=true
-	#Global.spawn = Vector2(6400, 100)
-	Global.spawn = Vector2(10496, 0)
+	Global.spawn = Vector2(11488, 12)
 	play_game()
 
 
@@ -58,8 +58,7 @@ func _on_level_3_pressed() -> void:
 	Global.sliders_activated[0]=true
 	Global.sliders_activated[1]=true
 	Global.sliders_activated[2]=true
-	#Global.spawn = Vector2(113*64, 64)
-	Global.spawn = Vector2(16640, 640)
+	Global.spawn = Vector2(25376, 972)
 	play_game()
 
 
@@ -69,6 +68,5 @@ func _on_level_4_pressed() -> void:
 	Global.sliders_activated[1]=true
 	Global.sliders_activated[2]=true
 	Global.sliders_activated[3]=true
-	#Global.spawn = Vector2(396*64, 14*64)
-	Global.spawn = Vector2(34000, -150)
+	Global.spawn = Vector2(34464, -52)
 	play_game()
