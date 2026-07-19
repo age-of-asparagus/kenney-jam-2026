@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cu4swywxu54eq" path="res://win_block.gd" id="1_42wgf"]
 [ext_resource type="Texture2D" uid="uid://cmg2mnsekmcxe" path="res://assets/kenney-platformer-pack/Sprites/Tiles/Default/door_open_top.png" id="2_do0s6"]
+[ext_resource type="AudioStream" uid="uid://o4sv7v4cdqku" path="res://assets/kenney_music-jingles/Audio/Steel jingles/jingles_STEEL02.ogg" id="3_do0s6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67acf"]
 size = Vector2(32, 64)
@@ -16,5 +17,8 @@ shape = SubResource("RectangleShape2D_67acf")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=462437957]
 texture = ExtResource("2_do0s6")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=61628539]
+stream = ExtResource("3_do0s6")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

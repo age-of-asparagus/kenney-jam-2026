@@ -87,6 +87,8 @@ func _physics_process(delta):
 			
 			
 
+func fade_out():
+	$AnimationPlayer.play("fade_out")
 
 func die():
 	player_dead = true
