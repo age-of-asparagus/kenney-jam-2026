@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c6wqoc1uatjlu"]
 
 [ext_resource type="Script" uid="uid://bxbgddkp8ptvi" path="res://breakable_block.gd" id="1_20sil"]
-[ext_resource type="Texture2D" uid="uid://cyysnuirq7qhg" path="res://assets/kenney-platformer-pack/Vector/Tiles/block_empty.svg" id="2_a7jpp"]
+[ext_resource type="Texture2D" uid="uid://owogvcsm12nu" path="res://TexturesForWebBugs/WekestBlockTexture.tres" id="2_a7jpp"]
 [ext_resource type="AudioStream" uid="uid://0on382k7ncyu" path="res://assets/kenney_sci-fi-sounds/Audio/explosionCrunch_002.ogg" id="3_a7jpp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67acf"]
