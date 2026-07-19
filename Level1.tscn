@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://bookk06xhk42y" path="res://death_bottom.tscn" id="6_wwg42"]
 [ext_resource type="PackedScene" uid="uid://cycn3nwdnhutw" path="res://Scene_Tileset.tscn" id="7_63dbn"]
 [ext_resource type="AudioStream" uid="uid://deahhoq7fd2pn" path="res://assets/viacheslavstarostin-chinese-lunar-new-year-465871.mp3" id="8_6o4c3"]
-[ext_resource type="Script" path="res://character_body_2d.gd" id="8_wapi5"]
 [ext_resource type="PackedScene" uid="uid://cyn58xmj0hoax" path="res://switch.tscn" id="9_5py54"]
 [ext_resource type="PackedScene" uid="uid://dna7e2bb12fba" path="res://switchMassRed.tscn" id="10_wapi5"]
 [ext_resource type="PackedScene" uid="uid://go0u6p4qvte1" path="res://switchGravYellow.tscn" id="11_a2cb0"]
@@ -36,9 +35,6 @@ position = Vector2(27696, 280)
 position = Vector2(11040, 40)
 
 [node name="Player" parent="." unique_id=1295228391 instance=ExtResource("2_igy5n")]
-position = Vector2(213, 21)
-collision_mask = 6
-script = ExtResource("8_wapi5")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2090488941]
 
