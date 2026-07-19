@@ -18,7 +18,7 @@
 [node name="Background" parent="." unique_id=1540794392 instance=ExtResource("1_ghony")]
 
 [node name="Scene_tileset" parent="." unique_id=1550837718 instance=ExtResource("2_0m0s3")]
-tile_map_data = PackedByteArray("AAASAAcABwAAAAAAAQAeAAUABwAAAAAAAQBdAAwABwAAAAAAAQBhAAkABwAAAAAAAQBmAAYABwAAAAAAAQAaAAcABwAAAAAAAQBuAAMABwAAAAAAAQAmAAIABwAAAAAAAgBCAAIABwAAAAAAAgA=")
+tile_map_data = PackedByteArray("AAASAAcABwAAAAAAAQAeAAUABwAAAAAAAQBdAAwABwAAAAAAAQBhAAkABwAAAAAAAQBmAAYABwAAAAAAAQAaAAcABwAAAAAAAQBuAAMABwAAAAAAAQAmAAIABwAAAAAAAgBCAAIABwAAAAAAAgARAAcABwAAAAAAAwARAAYABwAAAAAAAwARAAUABwAAAAAAAwARAAQABwAAAAAAAwARAAMABwAAAAAAAwA=")
 
 [node name="Player" parent="." unique_id=1295228391 instance=ExtResource("3_2nb6v")]
 position = Vector2(213, 21)

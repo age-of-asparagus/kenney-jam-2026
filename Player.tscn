@@ -35,6 +35,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tdg3f"]
 size = Vector2(41, 97)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_20sil"]
+size = Vector2(84, 103)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67acf"]
 size = Vector2(76, 97)
 
@@ -62,6 +65,14 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detector_jumps" unique_id=1099658747]
 shape = SubResource("RectangleShape2D_tdg3f")
 
+[node name="detector_breakable" type="Area2D" parent="." unique_id=177597368]
+collision_layer = 0
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detector_breakable" unique_id=1704944423]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_20sil")
+
 [node name="detector_objects" type="Area2D" parent="." unique_id=1369704099]
 collision_layer = 0
 collision_mask = 2
@@ -83,8 +94,6 @@ collision_mask = 8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detector_obstacles" unique_id=646448215]
 shape = SubResource("RectangleShape2D_67acf")
 
-[node name="scaling_origin" type="Node2D" parent="." unique_id=1053390586]
-
 [node name="AudioStreamPlayer-Jump" type="AudioStreamPlayer" parent="." unique_id=354574587]
 stream = ExtResource("5_cxr5p")
 
@@ -95,5 +104,6 @@ position = Vector2(0, 48)
 stream = ExtResource("7_dtqjt")
 
 [connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]
+[connection signal="body_entered" from="detector_breakable" to="." method="_on_detector_breakable_body_entered"]
 [connection signal="area_entered" from="detector_checkpoints" to="." method="_on_detector_checkpoints_area_entered"]
 [connection signal="area_entered" from="detector_obstacles" to="." method="_on_detector_obstacles_area_entered"]

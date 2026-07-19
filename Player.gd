@@ -6,6 +6,7 @@ var speed = 200
 var jumpforce = 700
 var gravity = 15
 var mass = 1
+var momentum : float
 
 var Ground_Particles = preload("res://walking_particles.tscn")
 
@@ -95,7 +96,6 @@ func _on_detector_obstacles_area_entered(area):
 
 
 func _on_animated_sprite_2d_animation_looped():
-	print(Global.mass)
 	if $AnimatedSprite2D.animation == "walking":
 		var ground_particles = Ground_Particles.instantiate()
 		ground_particles.global_position = $ground_particle_position.global_position
@@ -109,3 +109,12 @@ func _on_animated_sprite_2d_animation_looped():
 func _on_detector_checkpoints_area_entered(area):
 	Global.spawn = area.global_position + Vector2(0,-20)
 	area.activate()
+
+
+func _on_detector_breakable_body_entered(body):
+	momentum = mass*velocity.length()
+	print(momentum)
+	if momentum >= body.durability:
+		body.broken()
+	else:
+		body.collision_layer |= 2
